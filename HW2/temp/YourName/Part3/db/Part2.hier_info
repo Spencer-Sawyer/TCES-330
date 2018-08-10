@@ -1,0 +1,104 @@
+|Part2
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+carryout => tens[3].IN1
+HEX1[6] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HexHEXd:onesnumber.port1
+HEX0[5] <= HexHEXd:onesnumber.port1
+HEX0[4] <= HexHEXd:onesnumber.port1
+HEX0[3] <= HexHEXd:onesnumber.port1
+HEX0[2] <= HexHEXd:onesnumber.port1
+HEX0[1] <= HexHEXd:onesnumber.port1
+HEX0[0] <= HexHEXd:onesnumber.port1
+
+
+|Part2|HexHEXd:onesnumber
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part2|HexHEXd:tensnumber
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+

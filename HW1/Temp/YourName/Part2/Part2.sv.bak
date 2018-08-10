@@ -1,0 +1,7 @@
+module Part2(S,X,Y,M);
+input S SW[17];
+input X SW[0:3];
+input Y sw[4:7];
+output M LEDG[0:3];
+Mux_4w_2_to_1(S,X,Y,M);
+endmodule

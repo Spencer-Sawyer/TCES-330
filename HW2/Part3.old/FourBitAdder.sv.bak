@@ -1,0 +1,20 @@
+module FourBitAdder(input [0:3] a,input [0:3] b,input carry_in,output carry_out,output [0:3]result)
+
+wire [0:4] carries;
+assign carries[0]=carry_in;
+assign carries[4]=carry_out
+
+genvar i;
+generate
+for(i=0;i<4;i++):add
+begin
+FullAdder(a[i],b[i],carries[i],carries[i+1],result[i])
+end
+
+
+
+endgenerate
+
+
+
+endmodule

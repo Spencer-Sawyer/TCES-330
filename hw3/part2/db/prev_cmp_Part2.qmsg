@@ -1,0 +1,12 @@
+{ "Info" "0" "" "qar.tcl version #1" {  } {  } 0 0 "qar.tcl version #1" 0 0 "0" 0 0 1525635469417 ""}
+{ "Info" "0" "" "Including '-use_file_set basic' by default" {  } {  } 0 0 "Including '-use_file_set basic' by default" 0 0 "0" 0 0 1525635469875 ""}
+{ "Info" "0" "" "All project revisions will be stored in common archive Part2_tmp_archive.qar" {  } {  } 0 0 "All project revisions will be stored in common archive Part2_tmp_archive.qar" 0 0 "0" 0 0 1525635469875 ""}
+{ "Info" "0" "" "Initializing files for 'Part1' revision" {  } {  } 0 0 "Initializing files for 'Part1' revision" 0 0 "0" 0 0 1525635469963 ""}
+{ "Info" "0" "" "File Set 'Source control' contains:" { { "Info" "0" "" "Project source and settings files" {  } {  } 0 0 "Project source and settings files" 0 0 "0" 0 0 1525635469974 ""} { "Info" "0" "" "Automatically detected source files" {  } {  } 0 0 "Automatically detected source files" 0 0 "0" 0 0 1525635469974 ""}  } {  } 0 0 "File Set 'Source control' contains:" 0 0 "0" 0 0 1525635469974 ""}
+{ "Info" "0" "" "Archive will store files relative to the closest common parent directory" {  } {  } 0 0 "Archive will store files relative to the closest common parent directory" 0 0 "0" 0 0 1525635470096 ""}
+{ "Info" "IPRJ_ARC_TCL_TCL_USING_COMMON_DIR" "C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part2/ " "Using common directory C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part2/" {  } {  } 0 13213 "Using common directory %1!s!" 0 0 "Design Software" 0 -1 1525635470134 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "0" 0 0 1525635470223 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "0" 0 0 1525635470223 ""}
+{ "Info" "0" "" "Generated archive 'Part2_tmp_archive.qar'" {  } {  } 0 0 "Generated archive 'Part2_tmp_archive.qar'" 0 0 "0" 0 0 1525635470223 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "0" 0 0 1525635470223 ""}
+{ "Info" "0" "" "----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "0" 0 0 1525635470223 ""}

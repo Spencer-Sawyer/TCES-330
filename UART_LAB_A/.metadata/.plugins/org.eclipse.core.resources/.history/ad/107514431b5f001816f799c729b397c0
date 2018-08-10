@@ -1,0 +1,93 @@
+
+/****************************************************************************
+ * TXDriver.sv
+ ****************************************************************************/
+
+  
+/**
+ * Module: TXDriver
+ * 
+ * TODO: Add module documentation
+ */
+module TXDriver(input clock, input reset );
+reg  TxEmpty, XMitGo;
+reg [7:0] TxData;
+reg enable;
+reg [0:4] dataPointer;
+initial begin
+	dataPointer = 0;
+end
+localparam [7:0] 	H		=72,
+					E		=69,
+					L		=76,
+					O		=79,
+					W		=87,
+					R		=82,
+					D		=69,
+					point	=33,
+					space	=32,
+					newline =10;
+reg [0:12][7:0] data;
+
+assign data[0]	 =	 H;
+assign data[1]	 =	 E;
+assign data[2]	 =	 L;
+assign data[3]	 =	 L;
+assign data[4]	 =	 O;
+assign data[5]	 =	 space;
+assign data[6]	 =	 W;
+assign data[7]	 =	 O;
+assign data[8]	 =	 R;
+assign data[9]	 =	 L;
+assign data[10]	 =	 D;
+assign data[11]	 =	 point;
+assign data[12]	 =	 newline;
+
+enableEverySec enab(reset,clock,dataPointer==12,enable);
+
+always_comb
+begin
+	TxData=data[dataPointer];
+end
+
+always_ff @ (posedge clock) 
+begin
+	if(reset|enable)
+	begin
+		dataPointer = 0;
+	end
+if(TxEmpty)
+begin
+	
+	if(dataPointer!=12&~(reset|enable))
+	begin
+		dataPointer <= dataPointer+1;
+		XMitGo <= 1;
+	end
+	else
+	begin
+		dataPointer <=dataPointer;
+		XMitGo <=0;
+	end
+	
+	
+	
+end
+else
+begin
+	XMitGo<=0;
+	
+end
+
+	
+end
+//UART send(clock,reset,TxData,XMitGo,TxEmpty)
+
+
+
+endmodule
+module testbench();
+	
+endmodule
+
+

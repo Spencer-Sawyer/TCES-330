@@ -1,0 +1,15 @@
+module UARTCombined(input CLOCK_50,input KEY[0:0],output GPIO[1:1]);
+reg baudenable;
+reg  TxEmpty;
+reg XMitGo;
+reg [7:0] TxData;
+
+baudlimit limiter( ~KEY , CLOCK_50,1,baudenable);
+TXDriver driver(CLOCK_50, ~KEY, TxEmpty,XMitGo,TxData );
+UART Tout(baudenable, CLOCK_50, ~KEY, TxData,XMitGo, TxEmpty,GPIO);
+
+
+
+
+
+endmodule 

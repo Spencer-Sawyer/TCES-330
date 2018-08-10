@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Part4/countTo7.sv&apos; to &apos;enableEverySec.sv&apos;" description="Rename resource &apos;countTo7.sv&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="countTo7.sv" name="enableEverySec.sv" stamp="1526489624000" updateReferences="true"/>
+</session>

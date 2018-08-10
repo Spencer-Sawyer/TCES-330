@@ -1,0 +1,149 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+runlab.do
+# couldn't execute ".\runlab.do": no such file or directory
+runlab
+# invalid command name "runlab"
+./runlab.do
+# couldn't execute ".\runlab.do": no such file or directory
+dir
+#  Volume in drive C has no label.
+#  Volume Serial Number is C216-B8D4
+# 
+#  Directory of C:\Users\eedqs\Google Drive\Documents for School\spring 12018\TCES 330\HW1\Part2
+# 
+# 04/14/2018  20:54 night    <DIR>          .
+# 04/14/2018  20:54 night    <DIR>          ..
+# 04/14/2018  20:21 night    <DIR>          db
+# 04/14/2018  18:42 night    <DIR>          incremental_db
+# 04/14/2018  20:53 night                59 Launch_ModelSim.bat
+# 04/14/2018  20:20 night               582 Mux_4w_2_to_1.sv
+# 04/14/2018  18:03 night                 0 Mux_4w_2_to_1.sv.bak
+# 04/14/2018  20:50 night               797 Mux_4w_2_to_1testbench_wave.do
+# 04/14/2018  20:21 night    <DIR>          output_files
+# 04/14/2018  18:01 night             1,330 Part2.qpf
+# 04/14/2018  20:20 night            64,679 Part2.qsf
+# 04/14/2018  18:43 night             3,064 Part2.qsf.bak
+# 04/14/2018  19:25 night               273 Part2.sv
+# 04/14/2018  18:21 night               134 Part2.sv.bak
+# 04/14/2018  20:51 night               665 runlab.do
+# 04/14/2018  18:43 night    <DIR>          simulation
+# 04/14/2018  20:55 night               252 transcript
+#               11 File(s)         71,835 bytes
+#                6 Dir(s)  262,186,029,056 bytes free
+runlab.do
+# couldn't execute ".\runlab.do": no such file or directory
+do runlab.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:58:05 on Apr 14,2018
+# vlog -reportprogress 300 ./Mux_4w_2_to_1.sv 
+# -- Compiling module Mux_4w_2_to_1
+# ** Error: ./Mux_4w_2_to_1.sv(15): (vlog-2110) Illegal reference to net "M".
+# -- Compiling module Mux_4w_2_to_1testbench
+# ** Error: ./Mux_4w_2_to_1.sv(26): (vlog-2110) Illegal reference to net "S".
+# ** Error: ./Mux_4w_2_to_1.sv(28): (vlog-2110) Illegal reference to net "X".
+# ** Error: ./Mux_4w_2_to_1.sv(30): (vlog-2110) Illegal reference to net "Y".
+# End time: 20:58:06 on Apr 14,2018, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./Mux_4w_2_to_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:12:15 on Apr 14,2018
+# vlog -reportprogress 300 ./Mux_4w_2_to_1.sv 
+# -- Compiling module Mux_4w_2_to_1
+# ** Error: ./Mux_4w_2_to_1.sv(15): (vlog-2110) Illegal reference to net "M".
+# -- Compiling module Mux_4w_2_to_1testbench
+# End time: 21:12:15 on Apr 14,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./Mux_4w_2_to_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:23:10 on Apr 14,2018
+# vlog -reportprogress 300 ./Mux_4w_2_to_1.sv 
+# -- Compiling module Mux_4w_2_to_1
+# ** Error: ./Mux_4w_2_to_1.sv(15): (vlog-2110) Illegal reference to net "M".
+# -- Compiling module Mux_4w_2_to_1testbench
+# End time: 21:23:10 on Apr 14,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./Mux_4w_2_to_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:23:50 on Apr 14,2018
+# vlog -reportprogress 300 ./Mux_4w_2_to_1.sv 
+# -- Compiling module Mux_4w_2_to_1
+# ** Error: ./Mux_4w_2_to_1.sv(15): (vlog-2110) Illegal reference to net "M".
+# -- Compiling module Mux_4w_2_to_1testbench
+# End time: 21:23:50 on Apr 14,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./Mux_4w_2_to_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:25:52 on Apr 14,2018
+# vlog -reportprogress 300 ./Mux_4w_2_to_1.sv 
+# -- Compiling module Mux_4w_2_to_1
+# ** Error: ./Mux_4w_2_to_1.sv(15): (vlog-2110) Illegal reference to net "M".
+# -- Compiling module Mux_4w_2_to_1testbench
+# End time: 21:25:52 on Apr 14,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./Mux_4w_2_to_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:28:52 on Apr 14,2018
+# vlog -reportprogress 300 ./Mux_4w_2_to_1.sv 
+# -- Compiling module Mux_4w_2_to_1
+# ** Error: (vlog-13069) ./Mux_4w_2_to_1.sv(20): near "end": syntax error, unexpected end.
+# ** Error (suppressible): ./Mux_4w_2_to_1.sv(23): (vlog-2388) 'X' already declared in this scope (Mux_4w_2_to_1).
+# ** Error (suppressible): ./Mux_4w_2_to_1.sv(24): (vlog-2388) 'Y' already declared in this scope (Mux_4w_2_to_1).
+# ** Error (suppressible): ./Mux_4w_2_to_1.sv(25): (vlog-2388) 'S' already declared in this scope (Mux_4w_2_to_1).
+# ** Error (suppressible): ./Mux_4w_2_to_1.sv(26): (vlog-2388) 'M' already declared in this scope (Mux_4w_2_to_1).
+# End time: 21:28:52 on Apr 14,2018, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./Mux_4w_2_to_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:29:39 on Apr 14,2018
+# vlog -reportprogress 300 ./Mux_4w_2_to_1.sv 
+# -- Compiling module Mux_4w_2_to_1
+# -- Compiling module Mux_4w_2_to_1testbench
+# 
+# Top level modules:
+# 	Mux_4w_2_to_1testbench
+# End time: 21:29:39 on Apr 14,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work Mux_4w_2_to_1testbench 
+# Start time: 21:29:39 on Apr 14,2018
+# Loading sv_std.std
+# Loading work.Mux_4w_2_to_1testbench
+# Loading work.Mux_4w_2_to_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree

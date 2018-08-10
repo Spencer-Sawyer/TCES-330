@@ -1,0 +1,15 @@
+|MT1_1a
+b[0] => g.IN0
+b[0] => g.IN0
+b[1] => g.IN0
+b[1] => g.IN1
+b[1] => g.IN1
+b[1] => g.IN0
+b[2] => g.IN1
+b[2] => g[2].DATAIN
+b[2] => g.IN1
+g[2] <= b[2].DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+

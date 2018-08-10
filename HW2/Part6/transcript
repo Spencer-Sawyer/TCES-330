@@ -1,0 +1,102 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:11:11 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_Add2.sv 
+# -- Compiling module BCD_Add2
+# ** Error: ./BCD_Add2.sv(13): (vlog-2110) Illegal reference to net "T0".
+# ** Error: ./BCD_Add2.sv(16): (vlog-2110) Illegal reference to net "Z0".
+# ** Error: ./BCD_Add2.sv(17): (vlog-2110) Illegal reference to net "C1".
+# ** Error: ./BCD_Add2.sv(22): (vlog-2110) Illegal reference to net "Z0".
+# ** Error: ./BCD_Add2.sv(23): (vlog-2110) Illegal reference to net "C1".
+# ** Error: ./BCD_Add2.sv(30): (vlog-2110) Illegal reference to net "T1".
+# ** Error: ./BCD_Add2.sv(33): (vlog-2110) Illegal reference to net "Z1".
+# ** Error: ./BCD_Add2.sv(34): (vlog-2110) Illegal reference to net "C2".
+# ** Error: ./BCD_Add2.sv(39): (vlog-2110) Illegal reference to net "Z1".
+# ** Error: ./BCD_Add2.sv(40): (vlog-2110) Illegal reference to net "C2".
+# -- Compiling module BCD_Add2Test
+# End time: 11:11:12 on Apr 25,2018, Elapsed time: 0:00:01
+# Errors: 10, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 8
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog ./BCD_Add2.sv"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:12:55 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_Add2.sv 
+# -- Compiling module BCD_Add2
+# -- Compiling module BCD_Add2Test
+# 
+# Top level modules:
+# 	BCD_Add2Test
+# End time: 11:12:55 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work BCD_Add2Test 
+# Start time: 11:12:55 on Apr 25,2018
+# Loading sv_std.std
+# Loading work.BCD_Add2Test
+# Loading work.BCD_Add2
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./runlab.do line 20
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint  \
+sim:/BCD_Add2Test/bcd1 \
+sim:/BCD_Add2Test/bcd1tens \
+sim:/BCD_Add2Test/bcd2 \
+sim:/BCD_Add2Test/bcd2tens \
+sim:/BCD_Add2Test/hundreds \
+sim:/BCD_Add2Test/ones \
+sim:/BCD_Add2Test/tens
+run -all
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part6/wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:15:28 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_Add2.sv 
+# -- Compiling module BCD_Add2
+# -- Compiling module BCD_Add2Test
+# 
+# Top level modules:
+# 	BCD_Add2Test
+# End time: 11:15:28 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:15:30 on Apr 25,2018, Elapsed time: 0:02:35
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work BCD_Add2Test 
+# Start time: 11:15:30 on Apr 25,2018
+# Loading sv_std.std
+# Loading work.BCD_Add2Test
+# Loading work.BCD_Add2
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:17:27 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_Add2.sv 
+# -- Compiling module BCD_Add2
+# -- Compiling module BCD_Add2Test
+# 
+# Top level modules:
+# 	BCD_Add2Test
+# End time: 11:17:28 on Apr 25,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 11:17:29 on Apr 25,2018, Elapsed time: 0:01:59
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work BCD_Add2Test 
+# Start time: 11:17:29 on Apr 25,2018
+# Loading sv_std.std
+# Loading work.BCD_Add2Test
+# Loading work.BCD_Add2
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 11:18:02 on Apr 25,2018, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 0

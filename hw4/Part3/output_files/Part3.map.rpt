@@ -1,0 +1,501 @@
+Analysis & Synthesis report for Part3
+Fri Jun 01 10:03:43 2018
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Part3|FSMPart3:toDigit|CurrentState
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Port Connectivity Checks: "HexHELO:outStateSeven"
+ 13. Port Connectivity Checks: "HexHELO:outStateSix"
+ 14. Port Connectivity Checks: "HexHELO:outStateFive"
+ 15. Port Connectivity Checks: "HexHELO:outStateFour"
+ 16. Port Connectivity Checks: "HexHELO:outStateThree"
+ 17. Port Connectivity Checks: "HexHELO:outStateTwo"
+ 18. Port Connectivity Checks: "HexHELO:outStateOne"
+ 19. Port Connectivity Checks: "HexHELO:outStateZero"
+ 20. Port Connectivity Checks: "FSMPart3:toDigit"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jun 01 10:03:43 2018       ;
+; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Part3                                       ;
+; Top-level Entity Name              ; Part3                                       ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 68                                          ;
+;     Total combinational functions  ; 47                                          ;
+;     Dedicated logic registers      ; 34                                          ;
+; Total registers                    ; 34                                          ;
+; Total pins                         ; 94                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; Part3              ; Part3              ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; Part3.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv      ;         ;
+; HexHELO.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/HexHELO.sv    ;         ;
+; FSMPart3.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/FSMPart3.sv   ;         ;
+; fourBitReg.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/fourBitReg.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 68           ;
+;                                             ;              ;
+; Total combinational functions               ; 47           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 3            ;
+;     -- 3 input functions                    ; 18           ;
+;     -- <=2 input functions                  ; 26           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 47           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 34           ;
+;     -- Dedicated logic registers            ; 34           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 94           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 34           ;
+; Total fan-out                               ; 353          ;
+; Average fan-out                             ; 1.31         ;
++---------------------------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
+; |Part3                     ; 47 (0)              ; 34 (0)                    ; 0           ; 0            ; 0       ; 0         ; 94   ; 0            ; |Part3                                   ; Part3       ; work         ;
+;    |FSMPart3:toDigit|      ; 15 (15)             ; 34 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit                  ; FSMPart3    ; work         ;
+;       |fourBitReg:five|    ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit|fourBitReg:five  ; fourBitReg  ; work         ;
+;       |fourBitReg:four|    ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit|fourBitReg:four  ; fourBitReg  ; work         ;
+;       |fourBitReg:one|     ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit|fourBitReg:one   ; fourBitReg  ; work         ;
+;       |fourBitReg:seven|   ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit|fourBitReg:seven ; fourBitReg  ; work         ;
+;       |fourBitReg:six|     ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit|fourBitReg:six   ; fourBitReg  ; work         ;
+;       |fourBitReg:three|   ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit|fourBitReg:three ; fourBitReg  ; work         ;
+;       |fourBitReg:two|     ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit|fourBitReg:two   ; fourBitReg  ; work         ;
+;       |fourBitReg:zero|    ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|FSMPart3:toDigit|fourBitReg:zero  ; fourBitReg  ; work         ;
+;    |HexHELO:outStateFive|  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|HexHELO:outStateFive              ; HexHELO     ; work         ;
+;    |HexHELO:outStateFour|  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|HexHELO:outStateFour              ; HexHELO     ; work         ;
+;    |HexHELO:outStateOne|   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|HexHELO:outStateOne               ; HexHELO     ; work         ;
+;    |HexHELO:outStateSeven| ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|HexHELO:outStateSeven             ; HexHELO     ; work         ;
+;    |HexHELO:outStateSix|   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|HexHELO:outStateSix               ; HexHELO     ; work         ;
+;    |HexHELO:outStateThree| ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|HexHELO:outStateThree             ; HexHELO     ; work         ;
+;    |HexHELO:outStateTwo|   ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|HexHELO:outStateTwo               ; HexHELO     ; work         ;
+;    |HexHELO:outStateZero|  ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Part3|HexHELO:outStateZero              ; HexHELO     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Part3|FSMPart3:toDigit|CurrentState                                                                                                                                                                                                           ;
++------------------------+-------------------+------------------------+----------------------+-----------------------+-----------------------+------------------------+----------------------+----------------------+-----------------------+--------------------+
+; Name                   ; CurrentState.Loop ; CurrentState.loadSeven ; CurrentState.loadSix ; CurrentState.loadFive ; CurrentState.loadFour ; CurrentState.loadThree ; CurrentState.loadTwo ; CurrentState.loadOne ; CurrentState.loadZero ; CurrentState.00000 ;
++------------------------+-------------------+------------------------+----------------------+-----------------------+-----------------------+------------------------+----------------------+----------------------+-----------------------+--------------------+
+; CurrentState.00000     ; 0                 ; 0                      ; 0                    ; 0                     ; 0                     ; 0                      ; 0                    ; 0                    ; 0                     ; 0                  ;
+; CurrentState.loadZero  ; 0                 ; 0                      ; 0                    ; 0                     ; 0                     ; 0                      ; 0                    ; 0                    ; 1                     ; 1                  ;
+; CurrentState.loadOne   ; 0                 ; 0                      ; 0                    ; 0                     ; 0                     ; 0                      ; 0                    ; 1                    ; 0                     ; 1                  ;
+; CurrentState.loadTwo   ; 0                 ; 0                      ; 0                    ; 0                     ; 0                     ; 0                      ; 1                    ; 0                    ; 0                     ; 1                  ;
+; CurrentState.loadThree ; 0                 ; 0                      ; 0                    ; 0                     ; 0                     ; 1                      ; 0                    ; 0                    ; 0                     ; 1                  ;
+; CurrentState.loadFour  ; 0                 ; 0                      ; 0                    ; 0                     ; 1                     ; 0                      ; 0                    ; 0                    ; 0                     ; 1                  ;
+; CurrentState.loadFive  ; 0                 ; 0                      ; 0                    ; 1                     ; 0                     ; 0                      ; 0                    ; 0                    ; 0                     ; 1                  ;
+; CurrentState.loadSix   ; 0                 ; 0                      ; 1                    ; 0                     ; 0                     ; 0                      ; 0                    ; 0                    ; 0                     ; 1                  ;
+; CurrentState.loadSeven ; 0                 ; 1                      ; 0                    ; 0                     ; 0                     ; 0                      ; 0                    ; 0                    ; 0                     ; 1                  ;
+; CurrentState.Loop      ; 1                 ; 0                      ; 0                    ; 0                     ; 0                     ; 0                      ; 0                    ; 0                    ; 0                     ; 1                  ;
++------------------------+-------------------+------------------------+----------------------+-----------------------+-----------------------+------------------------+----------------------+----------------------+-----------------------+--------------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; FSMPart3:toDigit|CurrentState~2       ; Lost fanout        ;
+; FSMPart3:toDigit|CurrentState~3       ; Lost fanout        ;
+; FSMPart3:toDigit|CurrentState~4       ; Lost fanout        ;
+; FSMPart3:toDigit|CurrentState~5       ; Lost fanout        ;
+; FSMPart3:toDigit|CurrentState~6       ; Lost fanout        ;
+; Total Number of Removed Registers = 5 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 34    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------+
+; Inverted Register Statistics                                ;
++---------------------------------------------------+---------+
+; Inverted Register                                 ; Fan out ;
++---------------------------------------------------+---------+
+; FSMPart3:toDigit|fourBitReg:zero|CurrentState[2]  ; 7       ;
+; FSMPart3:toDigit|fourBitReg:one|CurrentState[2]   ; 7       ;
+; FSMPart3:toDigit|fourBitReg:two|CurrentState[2]   ; 7       ;
+; FSMPart3:toDigit|fourBitReg:three|CurrentState[2] ; 7       ;
+; FSMPart3:toDigit|fourBitReg:four|CurrentState[2]  ; 7       ;
+; FSMPart3:toDigit|fourBitReg:five|CurrentState[2]  ; 7       ;
+; FSMPart3:toDigit|fourBitReg:six|CurrentState[2]   ; 7       ;
+; FSMPart3:toDigit|fourBitReg:seven|CurrentState[2] ; 7       ;
+; Total number of inverted registers = 8            ;         ;
++---------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HexHELO:outStateSeven"                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HexHELO:outStateSix"                                                                                                                                                            ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HexHELO:outStateFive"                                                                                                                                                           ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HexHELO:outStateFour"                                                                                                                                                           ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HexHELO:outStateThree"                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HexHELO:outStateTwo"                                                                                                                                                            ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HexHELO:outStateOne"                                                                                                                                                            ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "HexHELO:outStateZero"                                                                                                                                                           ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (3 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "FSMPart3:toDigit"      ;
++-----------------+-------+----------+--------------+
+; Port            ; Type  ; Severity ; Details      ;
++-----------------+-------+----------+--------------+
+; enable          ; Input ; Info     ; Stuck at VCC ;
+; heloIn[7][1..0] ; Input ; Info     ; Stuck at GND ;
+; heloIn[7][3]    ; Input ; Info     ; Stuck at GND ;
+; heloIn[7][2]    ; Input ; Info     ; Stuck at VCC ;
+; heloIn[6][1..0] ; Input ; Info     ; Stuck at GND ;
+; heloIn[6][3]    ; Input ; Info     ; Stuck at GND ;
+; heloIn[6][2]    ; Input ; Info     ; Stuck at VCC ;
+; heloIn[5][1..0] ; Input ; Info     ; Stuck at GND ;
+; heloIn[5][3]    ; Input ; Info     ; Stuck at GND ;
+; heloIn[5][2]    ; Input ; Info     ; Stuck at VCC ;
+; heloIn[4][1..0] ; Input ; Info     ; Stuck at VCC ;
+; heloIn[4][3..2] ; Input ; Info     ; Stuck at GND ;
+; heloIn[3][3..2] ; Input ; Info     ; Stuck at GND ;
+; heloIn[3][1]    ; Input ; Info     ; Stuck at VCC ;
+; heloIn[3][0]    ; Input ; Info     ; Stuck at GND ;
+; heloIn[2][3..2] ; Input ; Info     ; Stuck at GND ;
+; heloIn[2][1]    ; Input ; Info     ; Stuck at VCC ;
+; heloIn[2][0]    ; Input ; Info     ; Stuck at GND ;
+; heloIn[1][3..1] ; Input ; Info     ; Stuck at GND ;
+; heloIn[1][0]    ; Input ; Info     ; Stuck at VCC ;
+; heloIn[0]       ; Input ; Info     ; Stuck at GND ;
++-----------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 94                          ;
+; cycloneiii_ff         ; 34                          ;
+;     plain             ; 34                          ;
+; cycloneiii_lcell_comb ; 56                          ;
+;     normal            ; 56                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 0.93                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Jun 01 10:03:24 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Part3 -c Part3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file part3.sv
+    Info (12023): Found entity 1: Part3 File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file hexhelo.sv
+    Info (12023): Found entity 1: HexHELO File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/HexHELO.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file fsmpart3.sv
+    Info (12023): Found entity 1: FSMPart3 File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/FSMPart3.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file fourbitreg.sv
+    Info (12023): Found entity 1: fourBitReg File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/fourBitReg.sv Line: 12
+Info (12127): Elaborating entity "Part3" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Part3.sv(31): truncated value with size 32 to match size of target (4) File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at Part3.sv(32): truncated value with size 32 to match size of target (4) File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at Part3.sv(33): truncated value with size 32 to match size of target (4) File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at Part3.sv(34): truncated value with size 32 to match size of target (4) File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at Part3.sv(35): truncated value with size 32 to match size of target (4) File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at Part3.sv(36): truncated value with size 32 to match size of target (4) File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at Part3.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at Part3.sv(38): truncated value with size 32 to match size of target (4) File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 38
+Warning (10034): Output port "LEDG[0]" at Part3.sv(12) has no driver File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 12
+Info (12128): Elaborating entity "FSMPart3" for hierarchy "FSMPart3:toDigit" File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 42
+Info (12128): Elaborating entity "fourBitReg" for hierarchy "FSMPart3:toDigit|fourBitReg:zero" File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/FSMPart3.sv Line: 96
+Info (12128): Elaborating entity "HexHELO" for hierarchy "HexHELO:outStateZero" File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 44
+Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/Part3.sv Line: 12
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/output_files/Part3.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 162 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 75 output pins
+    Info (21061): Implemented 68 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 674 megabytes
+    Info: Processing ended: Fri Jun 01 10:03:43 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:39
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part3/output_files/Part3.map.smsg.
+
+

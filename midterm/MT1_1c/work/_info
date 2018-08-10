@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/midterm/MT1_1c
+vMT1_1c
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1525286340
+!i10b 1
+!s100 AR8djfDWlcgR`E@NS=j:i0
+IVU?FDliVR<AH8WHPf7N`U1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 MT1_1c_sv_unit
+S1
+R0
+Z5 w1525286334
+Z6 8./MT1_1c.sv
+Z7 F./MT1_1c.sv
+L0 7
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1525286340.000000
+Z10 !s107 ./MT1_1c.sv|
+Z11 !s90 -reportprogress|300|./MT1_1c.sv|
+!i113 1
+Z12 tCvgOpt 0
+n@m@t1_1c
+vMT1_1cTestBench
+R1
+R2
+!i10b 1
+!s100 n8b>?kB0Mo4=[5PlWW4A51
+I@bn]jD_o;3F@?Ll`mR5^g0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 30
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+n@m@t1_1c@test@bench

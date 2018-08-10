@@ -1,0 +1,73 @@
+Quartus Prime Archive log --	C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part5_tmp_archive.qarlog
+
+Archive:	C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part5_tmp_archive.qar
+Date:		Sun Apr 22 23:21:33 2018
+Quartus Prime		17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/BCD_2d_ADD.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/BCD_Add.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/FourBitAdder.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/FullAdder.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/HexDtoDec.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/HexHEXd.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part2.qsf
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part2.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part3.qsf
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part3.qws
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part3.restore.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part3.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part4.qsf
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part4.qws
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part4.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part4_description.txt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part5.qpf
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part5.qsf
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part5.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part5_description.txt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/assignment_defaults.qdf
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part2.done
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part2.flow.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part2.map.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part2.map.summary
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part3.flow.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part3.map.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part3.map.summary
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.asm.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.done
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.fit.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.fit.smsg
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.fit.summary
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.flow.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.jdi
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.map.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.map.summary
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.pin
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.sld
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.sof
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.sta.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part4.sta.summary
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.asm.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.done
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.fit.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.fit.smsg
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.fit.summary
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.flow.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.jdi
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.map.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.map.summary
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.pin
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.sld
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.sof
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.sta.rpt
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/output_files/Part5.sta.summary
+	======= Total: 56 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sun Apr 22 23:21:35 2018
+Source archive file:	C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5/Part5_tmp_archive.qar
+Archive was extracted into	C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part6/
+		 - successfully.

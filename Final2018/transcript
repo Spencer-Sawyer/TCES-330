@@ -1,0 +1,186 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:06:33 on Jun 06,2018
+# vlog -reportprogress 300 ./StepperSM.sv 
+# -- Compiling module StepperSM
+# ** Error: ./StepperSM.sv(29): (vlog-2110) Illegal reference to net "drive".
+# ** Error: ./StepperSM.sv(49): (vlog-2110) Illegal reference to net "drive".
+# ** Error: ./StepperSM.sv(69): (vlog-2110) Illegal reference to net "drive".
+# ** Error: ./StepperSM.sv(89): (vlog-2110) Illegal reference to net "drive".
+# ** Error: ./StepperSM.sv(109): (vlog-2110) Illegal reference to net "drive".
+# ** Error: ./StepperSM.sv(129): (vlog-2110) Illegal reference to net "drive".
+# ** Error: ./StepperSM.sv(149): (vlog-2110) Illegal reference to net "drive".
+# ** Error: ./StepperSM.sv(169): (vlog-2110) Illegal reference to net "drive".
+# ** Error: ./StepperSM.sv(189): (vlog-2110) Illegal reference to net "drive".
+# -- Compiling module StepperSM_testbench
+# End time: 11:06:33 on Jun 06,2018, Elapsed time: 0:00:00
+# Errors: 9, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog ./StepperSM.sv"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:07:01 on Jun 06,2018
+# vlog -reportprogress 300 ./StepperSM.sv 
+# -- Compiling module StepperSM
+# -- Compiling module StepperSM_testbench
+# 
+# Top level modules:
+# 	StepperSM_testbench
+# End time: 11:07:01 on Jun 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work StepperSM_testbench 
+# Start time: 11:07:02 on Jun 06,2018
+# Loading sv_std.std
+# Loading work.StepperSM_testbench
+# Loading work.StepperSM
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./runlab.do line 17
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+run -all
+restart
+add wave -position end  sim:/StepperSM_testbench/clock
+add wave -position end  sim:/StepperSM_testbench/dir
+add wave -position end  sim:/StepperSM_testbench/drive
+add wave -position end  sim:/StepperSM_testbench/reset
+add wave -position end  sim:/StepperSM_testbench/step
+run -all
+# Break key hit
+# Break in Module StepperSM_testbench at ./StepperSM.sv line 216
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/Final/wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:41 on Jun 06,2018
+# vlog -reportprogress 300 ./StepperSM.sv 
+# -- Compiling module StepperSM
+# ** Error: (vlog-13069) ./StepperSM.sv(12): near "~": syntax error, unexpected '~', expecting IDENTIFIER.
+# End time: 11:10:41 on Jun 06,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog ./StepperSM.sv"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:48 on Jun 06,2018
+# vlog -reportprogress 300 ./StepperSM.sv 
+# -- Compiling module StepperSM
+# ** Error: (vlog-13069) ./StepperSM.sv(12): near "~": syntax error, unexpected '~', expecting IDENTIFIER.
+# End time: 11:10:48 on Jun 06,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog ./StepperSM.sv"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:11:43 on Jun 06,2018
+# vlog -reportprogress 300 ./StepperSM.sv 
+# -- Compiling module StepperSM
+# -- Compiling module StepperSM_testbench
+# 
+# Top level modules:
+# 	StepperSM_testbench
+# End time: 11:11:43 on Jun 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:11:59 on Jun 06,2018, Elapsed time: 0:04:57
+# Errors: 11, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work StepperSM_testbench 
+# Start time: 11:11:59 on Jun 06,2018
+# Loading sv_std.std
+# Loading work.StepperSM_testbench
+# Loading work.StepperSM
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Break key hit
+# Break in Module StepperSM_testbench at ./StepperSM.sv line 216
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:13:50 on Jun 06,2018
+# vlog -reportprogress 300 ./StepperSM.sv 
+# -- Compiling module StepperSM
+# -- Compiling module StepperSM_testbench
+# 
+# Top level modules:
+# 	StepperSM_testbench
+# End time: 11:13:50 on Jun 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:13:51 on Jun 06,2018, Elapsed time: 0:01:52
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work StepperSM_testbench 
+# Start time: 11:13:51 on Jun 06,2018
+# Loading sv_std.std
+# Loading work.StepperSM_testbench
+# Loading work.StepperSM
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./StepperSM.sv(231)
+#    Time: 320 ps  Iteration: 0  Instance: /StepperSM_testbench
+# Break in Module StepperSM_testbench at ./StepperSM.sv line 231
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:14:21 on Jun 06,2018
+# vlog -reportprogress 300 ./StepperSM.sv 
+# -- Compiling module StepperSM
+# -- Compiling module StepperSM_testbench
+# 
+# Top level modules:
+# 	StepperSM_testbench
+# End time: 11:14:21 on Jun 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:14:22 on Jun 06,2018, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work StepperSM_testbench 
+# Start time: 11:14:22 on Jun 06,2018
+# Loading sv_std.std
+# Loading work.StepperSM_testbench
+# Loading work.StepperSM
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./StepperSM.sv(231)
+#    Time: 320 ps  Iteration: 0  Instance: /StepperSM_testbench
+# Break in Module StepperSM_testbench at ./StepperSM.sv line 231
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:18:50 on Jun 06,2018
+# vlog -reportprogress 300 -work work "+acc" "+cover" ./StepperSM.sv 
+# -- Compiling module StepperSM
+# ** Note: (vlog-143) Recognized 1 FSM in module "StepperSM(verilog)".
+# -- Compiling module StepperSM_testbench
+# 
+# Top level modules:
+# 	StepperSM_testbench
+# End time: 11:18:50 on Jun 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:18:51 on Jun 06,2018, Elapsed time: 0:04:29
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -fsmdebug -t 1ps -lib work StepperSM_testbench 
+# Start time: 11:18:51 on Jun 06,2018
+# Loading sv_std.std
+# Loading work.StepperSM_testbench
+# Loading work.StepperSM
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./StepperSM.sv(231)
+#    Time: 320 ps  Iteration: 0  Instance: /StepperSM_testbench
+# Break in Module StepperSM_testbench at ./StepperSM.sv line 231
+# End time: 11:56:07 on Jun 06,2018, Elapsed time: 0:37:16
+# Errors: 0, Warnings: 0

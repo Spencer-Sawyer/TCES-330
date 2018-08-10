@@ -1,0 +1,172 @@
+
+/****************************************************************************
+ * UART.sv
+ ****************************************************************************/
+
+  
+/**
+ * Module: UART
+ * 
+ * TODO: Add module documentation
+ */
+module UART(input baudLimiter, input clock, input reset, input [7:0] TxData, input XMitGo, output reg TxEmpty,output reg TxOut);
+	
+	localparam 	start    = 1, //this is the idle state, TxOut is high, and TxEmpty is true (high)
+				sendBit  = 2, //this is where we begin our packet, TxOut is pulled low and TxEmpty is set to false, (low)
+				sendData = 3; //this is where we send our data, what bit TxOut is equal to is dependent on how many times send data has been invoked,
+								//after this segment, we go back to idle (start) where TxOut is pulled high and TxEmpty is true for at least one baudcycle.
+	reg [3:0] bitPointer=0;
+	reg Done;
+	localparam lastBit = 7;
+	reg [1:0] state = start;
+	reg [7:0] localTxData;
+	always_comb
+	begin
+		if(bitPointer == lastBit)
+		begin
+			Done = 1;
+		end
+			else
+			begin
+				Done = 0;
+			end
+		
+	end
+	always_ff @(posedge clock)
+	begin
+	/*	if(reset)
+		begin
+			state<=start;
+		end
+	*/
+	
+		if(baudLimiter|reset) // if we are on the baudClock or we need to reset we update our state machine 
+		begin
+			case(state) //begin state machine
+				start: // the start state,
+				begin
+					TxEmpty <= 1; //in our start state our TxEmpty is set high,
+					TxOut   <= 1; //and our output is set high to signal that there is no byte ready
+					localTxData<=8'hff;
+					if(reset) //if we are in reset, we continue to be in the start state.
+					begin
+						state<=start;
+					end
+					else if(XMitGo) //if we aren't in reset and we have data we can pull,
+					begin
+						localTxData <= TxData; //then we'll set the data that we've pulled as our own local variable.
+						state <= sendBit; //and set the state that will begin our packet.
+					end
+					
+					
+				end
+				sendBit:
+				begin
+					if(reset) // if we are in reset, we need to stop what we are doing and head to start.
+					begin
+						state<=start;
+					end
+					else //otherwise, 
+					begin
+						TxEmpty<=0; //this is set to false,
+						TxOut<=0; //out is set low, as we have our data
+						localTxData<=localTxData; // our local data to send needs to remain the same here since we've pulled it from the driver.
+						state <=sendData; //and the next state will be to send data.
+						bitPointer <= 0; //since we are just starting our byte output, our bit pointer needs to be set to 0.
+					end
+				
+					
+				end
+				sendData:
+				begin
+					if(reset) // if we are in reset, we need to stop what we are doing and head to start.
+					begin
+						state<=start;
+					end
+					else
+					begin
+						TxEmpty<=0; //TxEmpty needs to be false, we aren't looking for more data right now!
+						TxOut<=localTxData[bitPointer]; //TxOut is going to be the bit of our local copy of the byte at our bit pointer
+						localTxData<=localTxData; //our local tx data is going to remain the same in this state,
+						
+						
+						if(Done) //if we've reached the end, we should set our next state to be the start since the start state pulls our tx line high.
+						begin
+							state<=start;
+						end
+						else //otherwise we should cycle back to this state with a new bitpointer.
+						begin
+							state<=sendData;
+							bitPointer=bitPointer+1;
+						end
+						
+						
+					end
+					
+				end
+				
+			endcase
+		end
+		else //if we aren't in reset and we aren't on the baud limiters tick, everything this always block effects should remain the same.
+		begin
+			state<=state;
+			bitPointer=bitPointer;
+			TxOut<=TxOut;
+			TxEmpty=TxEmpty;
+			localTxData<=localTxData;
+		end
+		
+		
+		
+	end
+	
+				
+				
+
+
+endmodule
+
+module testbenchUART();
+	reg [7:0] TxData;
+	reg en, clock, reset,  XMitGo,  TxEmpty, TxOut;
+	 UART test(en, clock, reset, TxData,  XMitGo,  TxEmpty, TxOut);
+	 
+	 
+	 initial begin
+	 clock = 0;
+	 reset = 0;
+	 XMitGo= 1;
+	 TxData = 0;
+	 en=0;
+	 #10;
+	 for(int i = 0; i<10;i++)
+	 begin
+	 TxData++;
+	 clock = 1;#10;
+	 clock = 0;#10;
+	 
+	 
+	 
+	 
+	 
+	 end
+	 en =1;
+	 for(int i = 0; i<10;i++)
+	 begin
+	 clock = 1;#10;
+	 clock = 0;#10;
+	 
+	 
+	 
+	 
+	 
+	 end
+	 
+	 end
+	 
+		
+	
+	
+endmodule 
+
+

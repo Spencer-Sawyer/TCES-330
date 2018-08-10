@@ -1,0 +1,111 @@
+
+/****************************************************************************
+ * TXDriver.sv
+ ****************************************************************************/
+
+  
+/**
+ * Module: TXDriver
+ * 
+ * TODO: Add module documentation
+ */
+module TXDriver(input clock, input reset,input reg  TxEmpty,output reg XMitGo,output reg [7:0] TxData );
+	reg waitDone; //wait for a second before transmitting again.
+	reg [0:4] dataPointer; //local register that will set 
+	reg done; //if we've reached the end we need to signal our one second timeout to start counting.
+
+		initial 
+		begin
+		dataPointer = 0;
+		end
+		
+	localparam dataEnd			=12; //define dataEnd to make this code more reusable if need be.
+	
+	localparam [7:0] 	H		=72, //define HELOWRD! \n as local Parameters 
+						E		=69,
+						L		=76,
+						O		=79,
+						
+						W		=87,
+						R		=82,
+						D		=69,
+						
+						point	=33,
+						space	=32,
+						newline =10;
+	
+	reg [0:dataEnd][7:0] data; //define the dataset to send to the UART
+	
+	assign data[0]	 =	 H;
+	assign data[1]	 =	 E;
+	assign data[2]	 =	 L;
+	assign data[3]	 =	 L;
+	assign data[4]	 =	 O;
+	assign data[5]	 =	 space;
+	assign data[6]	 =	 W;
+	assign data[7]	 =	 O;
+	assign data[8]	 =	 R;
+	assign data[9]	 =	 L;
+	assign data[10]	 =	 D;
+	assign data[11]	 =	 point;
+	assign data[12]	 =	 newline;
+
+
+enableEverySec enab(reset,clock,done,waitDone); //when the message is done, wait a second and enable again, 
+
+always_comb
+begin
+	TxData=data[dataPointer]; 			//The data sent to the UART should always be where the current data pointer is 
+	if(dataPointer == dataEnd)			//if the pointer is at the end of the array, we are done transmitting data.
+	begin
+	done = 1;							//set done to 1
+	end
+	else
+	begin
+	done = 0;							//hold done at 0 if we aren't at the end of the array.
+	end
+end
+
+always_ff @ (posedge clock) 
+begin
+	if(reset|waitDone)				//if we hit a reset dataPointer needs to be returned to zero. 	
+	begin
+		dataPointer = 0;
+		XMitGo <= 1;
+	end
+if(TxEmpty) //if the transmitter is empty, we need to send it more data,
+begin
+	
+	if(~done&~(reset|waitDone))		//if we aren't done, (At the end of the array) AND we haven't reset AND we haven't just hit the end of waiting for the next set of sending data
+									
+	begin
+		dataPointer <= dataPointer+1; //we need to increase the data pointer by one and set XMitGo to one
+		XMitGo <= 1;
+	end
+	else
+	begin
+		dataPointer <=dataPointer; //else we've reached the end and we should hold dataPointer constant and set XMitGo to 0;
+		XMitGo <=0;
+	end
+	
+	
+	
+end
+else
+begin
+	XMitGo<=0; //if TxEmpty isn't true, then we should set XMitGo to zero until we increment the data pointer.
+	
+end
+
+	
+end
+//UART send(clock,reset,TxData,XMitGo,TxEmpty) Going to send TxData, XMitGo as outputs instead and have TxEmpty as an input.
+
+
+
+endmodule
+module testbench();
+	
+endmodule
+
+

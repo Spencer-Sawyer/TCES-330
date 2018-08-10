@@ -1,0 +1,161 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:53 on Apr 25,2018
+# vlog -reportprogress 300 ./FourBitAdder.sv 
+# -- Compiling module FourBitAdder
+# -- Compiling module FourBitAdder_testbench
+# 
+# Top level modules:
+# 	FourBitAdder_testbench
+# End time: 10:54:53 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:53 on Apr 25,2018
+# vlog -reportprogress 300 ./FullAdder.sv 
+# -- Compiling module FullAdder
+# -- Compiling module FullAdder_testbench
+# 
+# Top level modules:
+# 	FullAdder_testbench
+# End time: 10:54:53 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:53 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_Add.sv 
+# -- Compiling module BCD_Add
+# -- Compiling module BCD_AddTest
+# 
+# Top level modules:
+# 	BCD_AddTest
+# End time: 10:54:53 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:53 on Apr 25,2018
+# vlog -reportprogress 300 ./HexDtoDec.sv 
+# -- Compiling module HexDtoDec
+# 
+# Top level modules:
+# 	HexDtoDec
+# End time: 10:54:53 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:53 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_2d_ADD.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./BCD_2d_ADD.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 10:54:53 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 11
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog ./BCD_2d_ADD.sv"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:55:23 on Apr 25,2018
+# vlog -reportprogress 300 ./FourBitAdder.sv 
+# -- Compiling module FourBitAdder
+# -- Compiling module FourBitAdder_testbench
+# 
+# Top level modules:
+# 	FourBitAdder_testbench
+# End time: 10:55:23 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:55:23 on Apr 25,2018
+# vlog -reportprogress 300 ./FullAdder.sv 
+# -- Compiling module FullAdder
+# -- Compiling module FullAdder_testbench
+# 
+# Top level modules:
+# 	FullAdder_testbench
+# End time: 10:55:23 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:55:23 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_Add.sv 
+# -- Compiling module BCD_Add
+# -- Compiling module BCD_AddTest
+# 
+# Top level modules:
+# 	BCD_AddTest
+# End time: 10:55:23 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:55:23 on Apr 25,2018
+# vlog -reportprogress 300 ./HexDtoDec.sv 
+# -- Compiling module HexDtoDec
+# 
+# Top level modules:
+# 	HexDtoDec
+# End time: 10:55:23 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:55:23 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_2d_Add.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./BCD_2d_Add.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 10:55:23 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 11
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog ./BCD_2d_Add.sv"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:58:24 on Apr 25,2018
+# vlog -reportprogress 300 ./FourBitAdder.sv 
+# -- Compiling module FourBitAdder
+# -- Compiling module FourBitAdder_testbench
+# 
+# Top level modules:
+# 	FourBitAdder_testbench
+# End time: 10:58:24 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:58:24 on Apr 25,2018
+# vlog -reportprogress 300 ./FullAdder.sv 
+# -- Compiling module FullAdder
+# -- Compiling module FullAdder_testbench
+# 
+# Top level modules:
+# 	FullAdder_testbench
+# End time: 10:58:24 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:58:24 on Apr 25,2018
+# vlog -reportprogress 300 ./BCD_Add.sv 
+# -- Compiling module BCD_Add
+# -- Compiling module BCD_AddTest
+# 
+# Top level modules:
+# 	BCD_AddTest
+# End time: 10:58:24 on Apr 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:58:24 on Apr 25,2018
+# vlog -reportprogress 300 ./HexDtoDec.sv 
+# -- Compiling module HexDtoDec
+# 
+# Top level modules:
+# 	HexDtoDec
+# End time: 10:58:25 on Apr 25,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work BCD_AddTest 
+# Start time: 10:58:25 on Apr 25,2018
+# Loading sv_std.std
+# Loading work.BCD_AddTest
+# Loading work.BCD_Add
+# Loading work.FourBitAdder
+# Loading work.HexDtoDec
+# Loading work.FullAdder
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 10:59:13 on Apr 25,2018, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 0

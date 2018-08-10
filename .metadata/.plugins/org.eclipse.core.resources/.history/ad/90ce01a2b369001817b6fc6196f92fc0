@@ -1,0 +1,197 @@
+
+/****************************************************************************
+ * StepperSM.sv
+ ****************************************************************************/
+
+  
+/**
+ * Module: StepperSM
+ * 
+ * TODO: Add module documentation
+ */
+module StepperSM(input clock,input step,input dir,input reset,output [3:0] drive);
+	reg [3:0] CurrentState=0;
+	reg [3:0] NextState;
+	assign drive=CurrentState;
+	localparam	A=4'b0001,
+				B=4'b0101,
+				C=4'b0100,
+				D=4'b1100,
+				E=4'b1000,
+				F=4'b1010,
+				G=4'b0010,
+				H=4'b0011;
+	always_comb
+	begin
+		case(CurrentState)
+			A:
+			begin
+				if(reset)
+				begin
+					NextState=A;
+				end
+				else if(step)
+				begin
+					NextState=A;
+				end
+				else if(dir)
+				begin
+					NextState=B;
+				end
+				else
+				begin
+					NextState=H;
+				end
+			end
+			B:
+			begin
+				if(reset)
+				begin
+					NextState=A;
+				end
+				else if(step)
+				begin
+					NextState=B;
+				end
+				else if(dir)
+				begin
+					NextState=C;
+				end
+				else
+				begin
+					NextState=A;
+				end
+			end
+			C:
+			begin
+				if(reset)
+				begin
+					NextState=A;
+				end
+				else if(step)
+				begin
+					NextState=C;
+				end
+				else if(dir)
+				begin
+					NextState=D;
+				end
+				else
+				begin
+					NextState=B;
+				end
+			end
+			D:
+			begin
+				if(reset)
+				begin
+					NextState=A;
+				end
+				else if(step)
+				begin
+					NextState=D;
+				end
+				else if(dir)
+				begin
+					NextState=E;
+				end
+				else
+				begin
+					NextState=C;
+				end
+			end
+			E:
+			begin
+				if(reset)
+				begin
+					NextState=A;
+				end
+				else if(step)
+				begin
+					NextState=E;
+				end
+				else if(dir)
+				begin
+					NextState=F;
+				end
+				else
+				begin
+					NextState=D;
+				end
+			end
+			F:
+			begin
+				if(reset)
+				begin
+					NextState=A;
+				end
+				else if(step)
+				begin
+					NextState=F;
+				end
+				else if(dir)
+				begin
+					NextState=G;
+				end
+				else
+				begin
+					NextState=E;
+				end
+			end
+			G:
+			begin
+				if(reset)
+				begin
+					NextState=A;
+				end
+				else if(step)
+				begin
+					NextState=G;
+				end
+				else if(dir)
+				begin
+					NextState=H;
+				end
+				else
+				begin
+					NextState=F;
+				end
+			end
+			H:
+			begin
+				if(reset)
+				begin
+					NextState=A;
+				end
+				else if(step)
+				begin
+					NextState=H;
+				end
+				else if(dir)
+				begin
+					NextState=A;
+				end
+				else
+				begin
+					NextState=G;
+				end
+			end
+			default:
+			begin
+				NextState=A;
+			end
+				
+			
+			
+		endcase
+		
+	end
+	always_ff @ (posedge clock)
+	begin
+		CurrentState<=NextState;
+	end
+
+
+endmodule
+
+

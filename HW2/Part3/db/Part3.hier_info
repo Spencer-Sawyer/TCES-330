@@ -1,0 +1,212 @@
+|Part3
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+HEX0[6] <= Part2:comb_4.port3
+HEX0[5] <= Part2:comb_4.port3
+HEX0[4] <= Part2:comb_4.port3
+HEX0[3] <= Part2:comb_4.port3
+HEX0[2] <= Part2:comb_4.port3
+HEX0[1] <= Part2:comb_4.port3
+HEX0[0] <= Part2:comb_4.port3
+HEX1[6] <= Part2:comb_4.port2
+HEX1[5] <= Part2:comb_4.port2
+HEX1[4] <= Part2:comb_4.port2
+HEX1[3] <= Part2:comb_4.port2
+HEX1[2] <= Part2:comb_4.port2
+HEX1[1] <= Part2:comb_4.port2
+HEX1[0] <= Part2:comb_4.port2
+
+
+|Part3|FourBitAdder:comb_3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+carry_in => carries[0].IN1
+result[0] <= FullAdder:adders[0].name.port3
+result[1] <= FullAdder:adders[1].name.port3
+result[2] <= FullAdder:adders[2].name.port3
+result[3] <= FullAdder:adders[3].name.port3
+carry_out <= FullAdder:adders[3].name.port4
+
+
+|Part3|FourBitAdder:comb_3|FullAdder:adders[0].name
+a => result.IN0
+a => carry_out.IN0
+a => carry_out.IN0
+b => result.IN1
+b => carry_out.IN1
+b => carry_out.IN0
+carry_in => result.IN1
+carry_in => carry_out.IN1
+carry_in => carry_out.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FourBitAdder:comb_3|FullAdder:adders[1].name
+a => result.IN0
+a => carry_out.IN0
+a => carry_out.IN0
+b => result.IN1
+b => carry_out.IN1
+b => carry_out.IN0
+carry_in => result.IN1
+carry_in => carry_out.IN1
+carry_in => carry_out.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FourBitAdder:comb_3|FullAdder:adders[2].name
+a => result.IN0
+a => carry_out.IN0
+a => carry_out.IN0
+b => result.IN1
+b => carry_out.IN1
+b => carry_out.IN0
+carry_in => result.IN1
+carry_in => carry_out.IN1
+carry_in => carry_out.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FourBitAdder:comb_3|FullAdder:adders[3].name
+a => result.IN0
+a => carry_out.IN0
+a => carry_out.IN0
+b => result.IN1
+b => carry_out.IN1
+b => carry_out.IN0
+carry_in => result.IN1
+carry_in => carry_out.IN1
+carry_in => carry_out.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+carry_out <= carry_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|Part2:comb_4
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+carryout => tens[3].IN1
+HEX1[6] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HexHEXd:onesnumber.port1
+HEX0[5] <= HexHEXd:onesnumber.port1
+HEX0[4] <= HexHEXd:onesnumber.port1
+HEX0[3] <= HexHEXd:onesnumber.port1
+HEX0[2] <= HexHEXd:onesnumber.port1
+HEX0[1] <= HexHEXd:onesnumber.port1
+HEX0[0] <= HexHEXd:onesnumber.port1
+
+
+|Part3|Part2:comb_4|HexHEXd:onesnumber
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|Part2:comb_4|HexHEXd:tensnumber
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+C[3] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+

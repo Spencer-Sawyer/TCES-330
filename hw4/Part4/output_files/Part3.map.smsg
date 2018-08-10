@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at TXDriver.sv(53): always construct contains both blocking and non-blocking assignments File: C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/UART_LAB_A/TXDriver/TXDriver.sv Line: 53
+Warning (10268): Verilog HDL information at fourBitReg.sv(18): always construct contains both blocking and non-blocking assignments File: C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw4/Part4/fourBitReg.sv Line: 18

@@ -1,0 +1,19 @@
+
+State Machine - |StepperMoter|StepperSM:testOnBoard|CurrentState
+Name CurrentState.D CurrentState.F CurrentState.E CurrentState.B CurrentState.C CurrentState.H CurrentState.G CurrentState.A CurrentState.0000 
+CurrentState.0000 0 0 0 0 0 0 0 0 0 
+CurrentState.A 0 0 0 0 0 0 0 1 1 
+CurrentState.G 0 0 0 0 0 0 1 0 1 
+CurrentState.H 0 0 0 0 0 1 0 0 1 
+CurrentState.C 0 0 0 0 1 0 0 0 1 
+CurrentState.B 0 0 0 1 0 0 0 0 1 
+CurrentState.E 0 0 1 0 0 0 0 0 1 
+CurrentState.F 0 1 0 0 0 0 0 0 1 
+CurrentState.D 1 0 0 0 0 0 0 0 1 
+
+State Machine - |StepperMoter|ButtonSyncReg:syncClock|State
+Name State.S_D State.S_C State.S_B State.S_A 
+State.S_A 0 0 0 0 
+State.S_B 0 0 1 1 
+State.S_C 0 1 0 1 
+State.S_D 1 0 0 1 

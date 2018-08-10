@@ -1,0 +1,202 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part5
+vBCD_2d_ADD
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1524679355
+!i10b 1
+!s100 BjKeITL[5V08hacLEz?2G3
+I9D2nIUOi3HX[SNU[mYEZZ0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 BCD_2d_Add_sv_unit
+S1
+R0
+Z5 w1524678777
+Z6 8./BCD_2d_Add.sv
+Z7 F./BCD_2d_Add.sv
+L0 1
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1524679354.000000
+Z10 !s107 ./BCD_2d_Add.sv|
+Z11 !s90 -reportprogress|300|./BCD_2d_Add.sv|
+!i113 1
+Z12 tCvgOpt 0
+n@b@c@d_2d_@a@d@d
+vBCD_2d_AddTest
+R1
+R2
+!i10b 1
+!s100 ccJdTI>zl1DPFGHYEjDnK0
+ITe4az[F?zFWh]zdMB833P3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 15
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+n@b@c@d_2d_@add@test
+vBCD_Add
+R1
+Z13 !s110 1524679354
+!i10b 1
+!s100 6]L>Ii?VXQWE=8868R]1d1
+I6;z=kEICd2@^Wm4EjS;hX2
+R3
+!s105 BCD_Add_sv_unit
+S1
+R0
+w1524456693
+8./BCD_Add.sv
+F./BCD_Add.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./BCD_Add.sv|
+!s90 -reportprogress|300|./BCD_Add.sv|
+!i113 1
+R12
+n@b@c@d_@add
+vFourBitAdder
+R1
+R13
+!i10b 1
+!s100 kcWC16e=cYU7]RPTE;D5b2
+IG`PBZ[1NPjG8[VJ3K]nG^1
+R3
+Z14 !s105 FourBitAdder_sv_unit
+S1
+R0
+Z15 w1524451755
+Z16 8./FourBitAdder.sv
+Z17 F./FourBitAdder.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z18 !s107 ./FourBitAdder.sv|
+Z19 !s90 -reportprogress|300|./FourBitAdder.sv|
+!i113 1
+R12
+n@four@bit@adder
+vFourBitAdder_testbench
+R1
+R13
+!i10b 1
+!s100 7I]HMzK=n[X51G7X=UT:h1
+IiFDgfD<IN00izg]WHEWTV3
+R3
+R14
+S1
+R0
+R15
+R16
+R17
+L0 22
+R8
+r1
+!s85 0
+31
+R9
+R18
+R19
+!i113 1
+R12
+n@four@bit@adder_testbench
+vFullAdder
+R1
+R13
+!i10b 1
+!s100 5A@j:URPiY81]Fdde>Imd0
+I:LQNz8;N9gVEPY;Sjfl780
+R3
+Z20 !s105 FullAdder_sv_unit
+S1
+R0
+Z21 w1524445687
+Z22 8./FullAdder.sv
+Z23 F./FullAdder.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z24 !s107 ./FullAdder.sv|
+Z25 !s90 -reportprogress|300|./FullAdder.sv|
+!i113 1
+R12
+n@full@adder
+vFullAdder_testbench
+R1
+R13
+!i10b 1
+!s100 Gof9fdRZCC^IS?P6WUNRl3
+IIIi;3R1D`RDEdj^lg=`J^2
+R3
+R20
+S1
+R0
+R21
+R22
+R23
+L0 9
+R8
+r1
+!s85 0
+31
+R9
+R24
+R25
+!i113 1
+R12
+n@full@adder_testbench
+vHexDtoDec
+R1
+R13
+!i10b 1
+!s100 k7J7>[:zUh55GlRjM5VN=0
+IQTBOzUOgRXh^i6mVPoI7T3
+R3
+!s105 HexDtoDec_sv_unit
+S1
+R0
+w1524679243
+8./HexDtoDec.sv
+F./HexDtoDec.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./HexDtoDec.sv|
+!s90 -reportprogress|300|./HexDtoDec.sv|
+!i113 1
+R12
+n@hex@dto@dec

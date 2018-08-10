@@ -1,0 +1,6 @@
+
+State Machine - |UARTCombined|UART:Tout|state
+Name state.sendData state.start state.sendBit 
+state.start 0 0 0 
+state.sendBit 0 1 1 
+state.sendData 1 1 0 

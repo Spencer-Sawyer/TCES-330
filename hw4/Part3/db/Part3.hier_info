@@ -1,0 +1,537 @@
+|Part3
+SW[0] => FSMPart3:toDigit.s_reset
+SW[0] => LEDR[0].DATAIN
+SW[1] => LEDR[1].DATAIN
+SW[2] => LEDR[2].DATAIN
+SW[3] => LEDR[3].DATAIN
+SW[4] => LEDR[4].DATAIN
+SW[5] => LEDR[5].DATAIN
+SW[6] => LEDR[6].DATAIN
+SW[7] => LEDR[7].DATAIN
+SW[8] => LEDR[8].DATAIN
+SW[9] => LEDR[9].DATAIN
+SW[10] => LEDR[10].DATAIN
+SW[11] => LEDR[11].DATAIN
+SW[12] => LEDR[12].DATAIN
+SW[13] => LEDR[13].DATAIN
+SW[14] => LEDR[14].DATAIN
+SW[15] => LEDR[15].DATAIN
+SW[16] => LEDR[16].DATAIN
+SW[17] => LEDR[17].DATAIN
+KEY[0] => FSMPart3:toDigit.clock
+LEDG[0] << <GND>
+LEDR[0] << SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] << SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] << SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] << SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] << SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] << SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] << SW[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] << SW[9].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[10] << SW[10].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[11] << SW[11].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[12] << SW[12].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[13] << SW[13].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[14] << SW[14].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[15] << SW[15].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[16] << SW[16].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[17] << SW[17].DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] << HexHELO:outStateZero.port1
+HEX0[5] << HexHELO:outStateZero.port1
+HEX0[4] << HexHELO:outStateZero.port1
+HEX0[3] << HexHELO:outStateZero.port1
+HEX0[2] << HexHELO:outStateZero.port1
+HEX0[1] << HexHELO:outStateZero.port1
+HEX0[0] << HexHELO:outStateZero.port1
+HEX1[6] << HexHELO:outStateOne.port1
+HEX1[5] << HexHELO:outStateOne.port1
+HEX1[4] << HexHELO:outStateOne.port1
+HEX1[3] << HexHELO:outStateOne.port1
+HEX1[2] << HexHELO:outStateOne.port1
+HEX1[1] << HexHELO:outStateOne.port1
+HEX1[0] << HexHELO:outStateOne.port1
+HEX2[6] << HexHELO:outStateTwo.port1
+HEX2[5] << HexHELO:outStateTwo.port1
+HEX2[4] << HexHELO:outStateTwo.port1
+HEX2[3] << HexHELO:outStateTwo.port1
+HEX2[2] << HexHELO:outStateTwo.port1
+HEX2[1] << HexHELO:outStateTwo.port1
+HEX2[0] << HexHELO:outStateTwo.port1
+HEX3[6] << HexHELO:outStateThree.port1
+HEX3[5] << HexHELO:outStateThree.port1
+HEX3[4] << HexHELO:outStateThree.port1
+HEX3[3] << HexHELO:outStateThree.port1
+HEX3[2] << HexHELO:outStateThree.port1
+HEX3[1] << HexHELO:outStateThree.port1
+HEX3[0] << HexHELO:outStateThree.port1
+HEX4[6] << HexHELO:outStateFour.port1
+HEX4[5] << HexHELO:outStateFour.port1
+HEX4[4] << HexHELO:outStateFour.port1
+HEX4[3] << HexHELO:outStateFour.port1
+HEX4[2] << HexHELO:outStateFour.port1
+HEX4[1] << HexHELO:outStateFour.port1
+HEX4[0] << HexHELO:outStateFour.port1
+HEX5[6] << HexHELO:outStateFive.port1
+HEX5[5] << HexHELO:outStateFive.port1
+HEX5[4] << HexHELO:outStateFive.port1
+HEX5[3] << HexHELO:outStateFive.port1
+HEX5[2] << HexHELO:outStateFive.port1
+HEX5[1] << HexHELO:outStateFive.port1
+HEX5[0] << HexHELO:outStateFive.port1
+HEX6[6] << HexHELO:outStateSix.port1
+HEX6[5] << HexHELO:outStateSix.port1
+HEX6[4] << HexHELO:outStateSix.port1
+HEX6[3] << HexHELO:outStateSix.port1
+HEX6[2] << HexHELO:outStateSix.port1
+HEX6[1] << HexHELO:outStateSix.port1
+HEX6[0] << HexHELO:outStateSix.port1
+HEX7[6] << HexHELO:outStateSeven.port1
+HEX7[5] << HexHELO:outStateSeven.port1
+HEX7[4] << HexHELO:outStateSeven.port1
+HEX7[3] << HexHELO:outStateSeven.port1
+HEX7[2] << HexHELO:outStateSeven.port1
+HEX7[1] << HexHELO:outStateSeven.port1
+HEX7[0] << HexHELO:outStateSeven.port1
+
+
+|Part3|FSMPart3:toDigit
+clock => clock.IN8
+enable => enable.IN8
+heloIn[0][0] => Selector3.IN8
+heloIn[0][1] => Selector2.IN8
+heloIn[0][2] => Selector1.IN8
+heloIn[0][3] => Selector0.IN8
+heloIn[1][0] => Selector3.IN7
+heloIn[1][1] => Selector2.IN7
+heloIn[1][2] => Selector1.IN7
+heloIn[1][3] => Selector0.IN7
+heloIn[2][0] => Selector3.IN6
+heloIn[2][1] => Selector2.IN6
+heloIn[2][2] => Selector1.IN6
+heloIn[2][3] => Selector0.IN6
+heloIn[3][0] => Selector3.IN5
+heloIn[3][1] => Selector2.IN5
+heloIn[3][2] => Selector1.IN5
+heloIn[3][3] => Selector0.IN5
+heloIn[4][0] => Selector3.IN4
+heloIn[4][1] => Selector2.IN4
+heloIn[4][2] => Selector1.IN4
+heloIn[4][3] => Selector0.IN4
+heloIn[5][0] => Selector3.IN3
+heloIn[5][1] => Selector2.IN3
+heloIn[5][2] => Selector1.IN3
+heloIn[5][3] => Selector0.IN3
+heloIn[6][0] => Selector3.IN2
+heloIn[6][1] => Selector2.IN2
+heloIn[6][2] => Selector1.IN2
+heloIn[6][3] => Selector0.IN2
+heloIn[7][0] => Selector3.IN1
+heloIn[7][1] => Selector2.IN1
+heloIn[7][2] => Selector1.IN1
+heloIn[7][3] => Selector0.IN1
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+s_reset => CurrentState.OUTPUTSELECT
+hex[0][0] <= hex[0][0].DB_MAX_OUTPUT_PORT_TYPE
+hex[0][1] <= hex[0][1].DB_MAX_OUTPUT_PORT_TYPE
+hex[0][2] <= hex[0][2].DB_MAX_OUTPUT_PORT_TYPE
+hex[0][3] <= hex[0][3].DB_MAX_OUTPUT_PORT_TYPE
+hex[1][0] <= hex[1][0].DB_MAX_OUTPUT_PORT_TYPE
+hex[1][1] <= hex[1][1].DB_MAX_OUTPUT_PORT_TYPE
+hex[1][2] <= hex[1][2].DB_MAX_OUTPUT_PORT_TYPE
+hex[1][3] <= hex[1][3].DB_MAX_OUTPUT_PORT_TYPE
+hex[2][0] <= hex[2][0].DB_MAX_OUTPUT_PORT_TYPE
+hex[2][1] <= hex[2][1].DB_MAX_OUTPUT_PORT_TYPE
+hex[2][2] <= hex[2][2].DB_MAX_OUTPUT_PORT_TYPE
+hex[2][3] <= hex[2][3].DB_MAX_OUTPUT_PORT_TYPE
+hex[3][0] <= hex[3][0].DB_MAX_OUTPUT_PORT_TYPE
+hex[3][1] <= hex[3][1].DB_MAX_OUTPUT_PORT_TYPE
+hex[3][2] <= hex[3][2].DB_MAX_OUTPUT_PORT_TYPE
+hex[3][3] <= hex[3][3].DB_MAX_OUTPUT_PORT_TYPE
+hex[4][0] <= hex[4][0].DB_MAX_OUTPUT_PORT_TYPE
+hex[4][1] <= hex[4][1].DB_MAX_OUTPUT_PORT_TYPE
+hex[4][2] <= hex[4][2].DB_MAX_OUTPUT_PORT_TYPE
+hex[4][3] <= hex[4][3].DB_MAX_OUTPUT_PORT_TYPE
+hex[5][0] <= hex[5][0].DB_MAX_OUTPUT_PORT_TYPE
+hex[5][1] <= hex[5][1].DB_MAX_OUTPUT_PORT_TYPE
+hex[5][2] <= hex[5][2].DB_MAX_OUTPUT_PORT_TYPE
+hex[5][3] <= hex[5][3].DB_MAX_OUTPUT_PORT_TYPE
+hex[6][0] <= hex[6][0].DB_MAX_OUTPUT_PORT_TYPE
+hex[6][1] <= hex[6][1].DB_MAX_OUTPUT_PORT_TYPE
+hex[6][2] <= hex[6][2].DB_MAX_OUTPUT_PORT_TYPE
+hex[6][3] <= hex[6][3].DB_MAX_OUTPUT_PORT_TYPE
+hex[7][0] <= fourBitReg:seven.port3
+hex[7][1] <= fourBitReg:seven.port3
+hex[7][2] <= fourBitReg:seven.port3
+hex[7][3] <= fourBitReg:seven.port3
+
+
+|Part3|FSMPart3:toDigit|fourBitReg:zero
+clock => CurrentState[0]~reg0.CLK
+clock => CurrentState[1]~reg0.CLK
+clock => CurrentState[2]~reg0.CLK
+clock => CurrentState[3]~reg0.CLK
+enable => CurrentState[1]~reg0.ENA
+enable => CurrentState[0]~reg0.ENA
+enable => CurrentState[2]~reg0.ENA
+enable => CurrentState[3]~reg0.ENA
+nextState[0] => CurrentState[0]~reg0.DATAIN
+nextState[1] => CurrentState[1]~reg0.DATAIN
+nextState[2] => CurrentState[2]~reg0.DATAIN
+nextState[3] => CurrentState[3]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[3] <= CurrentState[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FSMPart3:toDigit|fourBitReg:one
+clock => CurrentState[0]~reg0.CLK
+clock => CurrentState[1]~reg0.CLK
+clock => CurrentState[2]~reg0.CLK
+clock => CurrentState[3]~reg0.CLK
+enable => CurrentState[1]~reg0.ENA
+enable => CurrentState[0]~reg0.ENA
+enable => CurrentState[2]~reg0.ENA
+enable => CurrentState[3]~reg0.ENA
+nextState[0] => CurrentState[0]~reg0.DATAIN
+nextState[1] => CurrentState[1]~reg0.DATAIN
+nextState[2] => CurrentState[2]~reg0.DATAIN
+nextState[3] => CurrentState[3]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[3] <= CurrentState[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FSMPart3:toDigit|fourBitReg:two
+clock => CurrentState[0]~reg0.CLK
+clock => CurrentState[1]~reg0.CLK
+clock => CurrentState[2]~reg0.CLK
+clock => CurrentState[3]~reg0.CLK
+enable => CurrentState[1]~reg0.ENA
+enable => CurrentState[0]~reg0.ENA
+enable => CurrentState[2]~reg0.ENA
+enable => CurrentState[3]~reg0.ENA
+nextState[0] => CurrentState[0]~reg0.DATAIN
+nextState[1] => CurrentState[1]~reg0.DATAIN
+nextState[2] => CurrentState[2]~reg0.DATAIN
+nextState[3] => CurrentState[3]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[3] <= CurrentState[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FSMPart3:toDigit|fourBitReg:three
+clock => CurrentState[0]~reg0.CLK
+clock => CurrentState[1]~reg0.CLK
+clock => CurrentState[2]~reg0.CLK
+clock => CurrentState[3]~reg0.CLK
+enable => CurrentState[1]~reg0.ENA
+enable => CurrentState[0]~reg0.ENA
+enable => CurrentState[2]~reg0.ENA
+enable => CurrentState[3]~reg0.ENA
+nextState[0] => CurrentState[0]~reg0.DATAIN
+nextState[1] => CurrentState[1]~reg0.DATAIN
+nextState[2] => CurrentState[2]~reg0.DATAIN
+nextState[3] => CurrentState[3]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[3] <= CurrentState[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FSMPart3:toDigit|fourBitReg:four
+clock => CurrentState[0]~reg0.CLK
+clock => CurrentState[1]~reg0.CLK
+clock => CurrentState[2]~reg0.CLK
+clock => CurrentState[3]~reg0.CLK
+enable => CurrentState[1]~reg0.ENA
+enable => CurrentState[0]~reg0.ENA
+enable => CurrentState[2]~reg0.ENA
+enable => CurrentState[3]~reg0.ENA
+nextState[0] => CurrentState[0]~reg0.DATAIN
+nextState[1] => CurrentState[1]~reg0.DATAIN
+nextState[2] => CurrentState[2]~reg0.DATAIN
+nextState[3] => CurrentState[3]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[3] <= CurrentState[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FSMPart3:toDigit|fourBitReg:five
+clock => CurrentState[0]~reg0.CLK
+clock => CurrentState[1]~reg0.CLK
+clock => CurrentState[2]~reg0.CLK
+clock => CurrentState[3]~reg0.CLK
+enable => CurrentState[1]~reg0.ENA
+enable => CurrentState[0]~reg0.ENA
+enable => CurrentState[2]~reg0.ENA
+enable => CurrentState[3]~reg0.ENA
+nextState[0] => CurrentState[0]~reg0.DATAIN
+nextState[1] => CurrentState[1]~reg0.DATAIN
+nextState[2] => CurrentState[2]~reg0.DATAIN
+nextState[3] => CurrentState[3]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[3] <= CurrentState[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FSMPart3:toDigit|fourBitReg:six
+clock => CurrentState[0]~reg0.CLK
+clock => CurrentState[1]~reg0.CLK
+clock => CurrentState[2]~reg0.CLK
+clock => CurrentState[3]~reg0.CLK
+enable => CurrentState[1]~reg0.ENA
+enable => CurrentState[0]~reg0.ENA
+enable => CurrentState[2]~reg0.ENA
+enable => CurrentState[3]~reg0.ENA
+nextState[0] => CurrentState[0]~reg0.DATAIN
+nextState[1] => CurrentState[1]~reg0.DATAIN
+nextState[2] => CurrentState[2]~reg0.DATAIN
+nextState[3] => CurrentState[3]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[3] <= CurrentState[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|FSMPart3:toDigit|fourBitReg:seven
+clock => CurrentState[0]~reg0.CLK
+clock => CurrentState[1]~reg0.CLK
+clock => CurrentState[2]~reg0.CLK
+clock => CurrentState[3]~reg0.CLK
+enable => CurrentState[1]~reg0.ENA
+enable => CurrentState[0]~reg0.ENA
+enable => CurrentState[2]~reg0.ENA
+enable => CurrentState[3]~reg0.ENA
+nextState[0] => CurrentState[0]~reg0.DATAIN
+nextState[1] => CurrentState[1]~reg0.DATAIN
+nextState[2] => CurrentState[2]~reg0.DATAIN
+nextState[3] => CurrentState[3]~reg0.DATAIN
+CurrentState[0] <= CurrentState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[1] <= CurrentState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[2] <= CurrentState[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CurrentState[3] <= CurrentState[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|HexHELO:outStateZero
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|HexHELO:outStateOne
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|HexHELO:outStateTwo
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|HexHELO:outStateThree
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|HexHELO:outStateFour
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|HexHELO:outStateFive
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|HexHELO:outStateSix
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Part3|HexHELO:outStateSeven
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[0] => Hex.IN0
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[1] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+C[2] => Hex.IN1
+Hex[6] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[5] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[4] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[3] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[2] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[1] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+Hex[0] <= Hex.DB_MAX_OUTPUT_PORT_TYPE
+
+

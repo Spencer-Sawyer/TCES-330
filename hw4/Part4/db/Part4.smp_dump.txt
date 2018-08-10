@@ -1,0 +1,13 @@
+
+State Machine - |Part3|FSMPart3:toDigit|CurrentState
+Name CurrentState.Loop CurrentState.loadSeven CurrentState.loadSix CurrentState.loadFive CurrentState.loadFour CurrentState.loadThree CurrentState.loadTwo CurrentState.loadOne CurrentState.loadZero CurrentState.00000 
+CurrentState.00000 0 0 0 0 0 0 0 0 0 0 
+CurrentState.loadZero 0 0 0 0 0 0 0 0 1 1 
+CurrentState.loadOne 0 0 0 0 0 0 0 1 0 1 
+CurrentState.loadTwo 0 0 0 0 0 0 1 0 0 1 
+CurrentState.loadThree 0 0 0 0 0 1 0 0 0 1 
+CurrentState.loadFour 0 0 0 0 1 0 0 0 0 1 
+CurrentState.loadFive 0 0 0 1 0 0 0 0 0 1 
+CurrentState.loadSix 0 0 1 0 0 0 0 0 0 1 
+CurrentState.loadSeven 0 1 0 0 0 0 0 0 0 1 
+CurrentState.Loop 1 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,10 @@
+module Part4(input [0:17]SW,output [0:17]LEDR,output [0:6] HEX0);
+
+assign LEDR=SW;
+HexHELO(SW[0:3],HEX0);
+
+
+
+
+endmodule
+

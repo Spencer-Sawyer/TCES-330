@@ -1,0 +1,14 @@
+module HexDtoDec(input [3:0]in,output [0:3] tens,output [0:3] ones);
+assign tens[0]=in[3]&(in[1]|in[2];
+
+always @ (in[0]|in[1]|in[2]|in[3])
+if(in<10)
+ones<=in;
+else 
+ones<=in-10;
+
+
+
+
+
+endmodule 

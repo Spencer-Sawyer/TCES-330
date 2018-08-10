@@ -1,0 +1,50 @@
+
+/****************************************************************************
+ * baudlimit.sv
+ ****************************************************************************/
+
+  
+/**
+ * Module: baudlimit, this will count out clock cycles to limit the baud.
+ * this module is based on enableEverySec and I am assuming that the small changes needed to change it from
+ * every second to every 1/38400 of a second wont significantly change it.
+ * 
+ * TODO: Add module documentation
+ */
+module baudlimit(input clr,input CLOCK,input enable,output reg enable2clr1);
+
+	
+	
+	reg [15:0] FirstCountTo50k;
+	reg [15:0] ThenCountTo1k;
+		
+		
+	reg enable1clr0;
+	//reg enable2clr1;
+	reg clr3;
+		
+	always@(FirstCountTo50k)
+	begin
+		if(FirstCountTo50k==49999)
+			enable1clr0=1;
+		else
+			enable1clr0=0;
+	end
+	always@(ThenCountTo1k)
+	begin
+		if(ThenCountTo1k==1000)
+			enable2clr1=1;
+		else
+			enable2clr1=0;
+	end
+		
+		
+	//counter b16(~SW[1], CLOCK_50, SW[0],ThenTo9);
+		
+	counter CountTo50k(      enable,  CLOCK, enable1clr0|clr, FirstCountTo50k);//divide enable by 50k
+	counter CountTo1k(  enable1clr0,  CLOCK, enable2clr1|clr, ThenCountTo1k  );//divide enable by another 1k
+
+
+endmodule
+
+

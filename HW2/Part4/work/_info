@@ -1,0 +1,178 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part4
+vBCD_Add
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1524679104
+!i10b 1
+!s100 ]cNg[IA:SP;X=3GAH`bY83
+IPP6V6<Gn[n>6ccH[I<h@D0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 BCD_Add_sv_unit
+S1
+R0
+Z5 w1524677849
+Z6 8./BCD_Add.sv
+Z7 F./BCD_Add.sv
+L0 1
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1524679104.000000
+Z10 !s107 ./BCD_Add.sv|
+Z11 !s90 -reportprogress|300|./BCD_Add.sv|
+!i113 1
+Z12 tCvgOpt 0
+n@b@c@d_@add
+vBCD_AddTest
+R1
+R2
+!i10b 1
+!s100 oel_hzi;<GKE2CbPFCz?n1
+IW7YJVOmHdQcNKdkWA0;Na0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 11
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+n@b@c@d_@add@test
+vFourBitAdder
+R1
+R2
+!i10b 1
+!s100 kcWC16e=cYU7]RPTE;D5b2
+IG`PBZ[1NPjG8[VJ3K]nG^1
+R3
+Z13 !s105 FourBitAdder_sv_unit
+S1
+R0
+Z14 w1524451755
+Z15 8./FourBitAdder.sv
+Z16 F./FourBitAdder.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z17 !s107 ./FourBitAdder.sv|
+Z18 !s90 -reportprogress|300|./FourBitAdder.sv|
+!i113 1
+R12
+n@four@bit@adder
+vFourBitAdder_testbench
+R1
+R2
+!i10b 1
+!s100 7I]HMzK=n[X51G7X=UT:h1
+IiFDgfD<IN00izg]WHEWTV3
+R3
+R13
+S1
+R0
+R14
+R15
+R16
+L0 22
+R8
+r1
+!s85 0
+31
+R9
+R17
+R18
+!i113 1
+R12
+n@four@bit@adder_testbench
+vFullAdder
+R1
+R2
+!i10b 1
+!s100 5A@j:URPiY81]Fdde>Imd0
+I:LQNz8;N9gVEPY;Sjfl780
+R3
+Z19 !s105 FullAdder_sv_unit
+S1
+R0
+Z20 w1524445687
+Z21 8./FullAdder.sv
+Z22 F./FullAdder.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z23 !s107 ./FullAdder.sv|
+Z24 !s90 -reportprogress|300|./FullAdder.sv|
+!i113 1
+R12
+n@full@adder
+vFullAdder_testbench
+R1
+R2
+!i10b 1
+!s100 Gof9fdRZCC^IS?P6WUNRl3
+IIIi;3R1D`RDEdj^lg=`J^2
+R3
+R19
+S1
+R0
+R20
+R21
+R22
+L0 9
+R8
+r1
+!s85 0
+31
+R9
+R23
+R24
+!i113 1
+R12
+n@full@adder_testbench
+vHexDtoDec
+R1
+!s110 1524679105
+!i10b 1
+!s100 k7J7>[:zUh55GlRjM5VN=0
+IQTBOzUOgRXh^i6mVPoI7T3
+R3
+!s105 HexDtoDec_sv_unit
+S1
+R0
+w1524677887
+8./HexDtoDec.sv
+F./HexDtoDec.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./HexDtoDec.sv|
+!s90 -reportprogress|300|./HexDtoDec.sv|
+!i113 1
+R12
+n@hex@dto@dec

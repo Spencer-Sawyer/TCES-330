@@ -1,0 +1,20 @@
+
+State Machine - |LabB|Processor:Test|State
+Name State.1111 State.fetch State.decode State.load_2 State.HALT State.SUBTRACT State.ADD State.LOAD State.STORE State.NOOP 
+State.NOOP 0 0 0 0 0 0 0 0 0 0 
+State.STORE 0 0 0 0 0 0 0 0 1 1 
+State.LOAD 0 0 0 0 0 0 0 1 0 1 
+State.ADD 0 0 0 0 0 0 1 0 0 1 
+State.SUBTRACT 0 0 0 0 0 1 0 0 0 1 
+State.HALT 0 0 0 0 1 0 0 0 0 1 
+State.load_2 0 0 0 1 0 0 0 0 0 1 
+State.decode 0 0 1 0 0 0 0 0 0 1 
+State.fetch 0 1 0 0 0 0 0 0 0 1 
+State.1111 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |LabB|ButtonSyncReg:comb_3|State
+Name State.S_D State.S_C State.S_B State.S_A 
+State.S_A 0 0 0 0 
+State.S_B 0 0 1 1 
+State.S_C 0 1 0 1 
+State.S_D 1 0 0 1 

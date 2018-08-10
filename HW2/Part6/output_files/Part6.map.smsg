@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at BCD_Add2.sv(27): always construct contains both blocking and non-blocking assignments File: C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW2/Part6/BCD_Add2.sv Line: 27

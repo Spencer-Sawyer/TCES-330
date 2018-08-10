@@ -1,0 +1,1181 @@
+TimeQuest Timing Analyzer report for UARTCombined
+Fri May 25 15:02:38 2018
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1200mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1200mV 85C Model Setup Summary
+  9. Slow 1200mV 85C Model Hold Summary
+ 10. Slow 1200mV 85C Model Recovery Summary
+ 11. Slow 1200mV 85C Model Removal Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 13. Slow 1200mV 85C Model Setup: 'CLOCK_50'
+ 14. Slow 1200mV 85C Model Hold: 'CLOCK_50'
+ 15. Slow 1200mV 85C Model Metastability Summary
+ 16. Slow 1200mV 0C Model Fmax Summary
+ 17. Slow 1200mV 0C Model Setup Summary
+ 18. Slow 1200mV 0C Model Hold Summary
+ 19. Slow 1200mV 0C Model Recovery Summary
+ 20. Slow 1200mV 0C Model Removal Summary
+ 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 22. Slow 1200mV 0C Model Setup: 'CLOCK_50'
+ 23. Slow 1200mV 0C Model Hold: 'CLOCK_50'
+ 24. Slow 1200mV 0C Model Metastability Summary
+ 25. Fast 1200mV 0C Model Setup Summary
+ 26. Fast 1200mV 0C Model Hold Summary
+ 27. Fast 1200mV 0C Model Recovery Summary
+ 28. Fast 1200mV 0C Model Removal Summary
+ 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 30. Fast 1200mV 0C Model Setup: 'CLOCK_50'
+ 31. Fast 1200mV 0C Model Hold: 'CLOCK_50'
+ 32. Fast 1200mV 0C Model Metastability Summary
+ 33. Multicorner Timing Analysis Summary
+ 34. Board Trace Model Assignments
+ 35. Input Transition Times
+ 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
+ 47. Unconstrained Input Ports
+ 48. Unconstrained Output Ports
+ 49. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; UARTCombined                                        ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.6%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------+
+; SDC File List                                        ;
++------------------+--------+--------------------------+
+; SDC File Path    ; Status ; Read at                  ;
++------------------+--------+--------------------------+
+; UARTCombined.sdc ; OK     ; Fri May 25 15:02:36 2018 ;
++------------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 228.47 MHz ; 228.47 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++----------+--------+-----------------+
+; Clock    ; Slack  ; End Point TNS   ;
++----------+--------+-----------------+
+; CLOCK_50 ; 15.623 ; 0.000           ;
++----------+--------+-----------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++----------+-------+-----------------+
+; Clock    ; Slack ; End Point TNS   ;
++----------+-------+-----------------+
+; CLOCK_50 ; 0.402 ; 0.000           ;
++----------+-------+-----------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++----------+-------+--------------------------------+
+; Clock    ; Slack ; End Point TNS                  ;
++----------+-------+--------------------------------+
+; CLOCK_50 ; 9.680 ; 0.000                          ;
++----------+-------+--------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLOCK_50'                                                                                                                                                                   ;
++--------+--------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                    ; To Node                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 15.623 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.308      ;
+; 15.623 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.308      ;
+; 15.623 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.308      ;
+; 15.623 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.308      ;
+; 15.623 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.308      ;
+; 15.647 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.284      ;
+; 15.647 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.284      ;
+; 15.647 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.284      ;
+; 15.647 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.284      ;
+; 15.647 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.284      ;
+; 15.653 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.278      ;
+; 15.653 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.278      ;
+; 15.653 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.278      ;
+; 15.653 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.278      ;
+; 15.653 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.278      ;
+; 15.669 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.262      ;
+; 15.669 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.262      ;
+; 15.669 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.262      ;
+; 15.669 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.262      ;
+; 15.669 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.262      ;
+; 15.672 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.268      ;
+; 15.673 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.267      ;
+; 15.673 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.267      ;
+; 15.674 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.266      ;
+; 15.674 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.266      ;
+; 15.676 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.264      ;
+; 15.679 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.252      ;
+; 15.679 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.252      ;
+; 15.679 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.252      ;
+; 15.679 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.252      ;
+; 15.679 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.252      ;
+; 15.696 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.244      ;
+; 15.697 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.243      ;
+; 15.698 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.242      ;
+; 15.700 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.240      ;
+; 15.721 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.219      ;
+; 15.723 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.217      ;
+; 15.778 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.153      ;
+; 15.792 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|state.start                                       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 4.144      ;
+; 15.792 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|state.sendData                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 4.144      ;
+; 15.804 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.127      ;
+; 15.806 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|state.start                                       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 4.130      ;
+; 15.806 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|state.sendData                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.082     ; 4.130      ;
+; 15.810 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.121      ;
+; 15.823 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.117      ;
+; 15.824 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.116      ;
+; 15.824 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.116      ;
+; 15.825 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.115      ;
+; 15.825 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.115      ;
+; 15.826 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.105      ;
+; 15.827 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.113      ;
+; 15.828 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.112      ;
+; 15.829 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.111      ;
+; 15.829 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.111      ;
+; 15.830 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.110      ;
+; 15.830 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.110      ;
+; 15.832 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.108      ;
+; 15.836 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.095      ;
+; 15.839 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.101      ;
+; 15.840 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.100      ;
+; 15.840 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.100      ;
+; 15.841 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.099      ;
+; 15.841 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.099      ;
+; 15.843 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.097      ;
+; 15.856 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.084      ;
+; 15.857 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.083      ;
+; 15.857 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.083      ;
+; 15.858 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.082      ;
+; 15.858 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.082      ;
+; 15.860 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.071      ;
+; 15.860 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.071      ;
+; 15.860 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.071      ;
+; 15.860 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.071      ;
+; 15.860 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.071      ;
+; 15.860 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.078     ; 4.080      ;
+; 15.873 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.086     ; 4.059      ;
+; 15.873 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.086     ; 4.059      ;
+; 15.873 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.086     ; 4.059      ;
+; 15.873 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.086     ; 4.059      ;
+; 15.873 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.086     ; 4.059      ;
+; 15.900 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[6]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.035      ;
+; 15.900 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[5]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.035      ;
+; 15.900 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[4]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.035      ;
+; 15.900 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[2]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.035      ;
+; 15.900 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[3]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.035      ;
+; 15.900 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[0]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.035      ;
+; 15.900 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[1]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.035      ;
+; 15.900 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[7]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.035      ;
+; 15.909 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[6]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.026      ;
+; 15.909 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[5]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.026      ;
+; 15.909 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[4]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.026      ;
+; 15.909 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[2]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.026      ;
+; 15.909 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[3]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.026      ;
+; 15.909 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[0]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.026      ;
+; 15.909 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[1]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.026      ;
+; 15.909 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[7]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.083     ; 4.026      ;
+; 15.917 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.014      ;
+; 15.917 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.014      ;
+; 15.917 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.014      ;
+; 15.917 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.087     ; 4.014      ;
++--------+--------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLOCK_50'                                                                                                                                                                    ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[0]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[12] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[4]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[4]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[0]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[2]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[3]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[3]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[7]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[5]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[5]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[6]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; UART:Tout|TxEmpty                                            ; UART:Tout|TxEmpty                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; UART:Tout|bitPointer[2]                                      ; UART:Tout|bitPointer[2]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; UART:Tout|bitPointer[3]                                      ; UART:Tout|bitPointer[3]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|bitPointer[0]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; UART:Tout|bitPointer[1]                                      ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[4]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[6]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[7]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[8]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[9]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|XMitGo                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.669      ;
+; 0.407 ; UART:Tout|state.sendData                                     ; UART:Tout|state.sendData                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.674      ;
+; 0.457 ; TXDriver:driver|dataPointer[0]                               ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.723      ;
+; 0.480 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.747      ;
+; 0.481 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[3]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.748      ;
+; 0.481 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[0]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.748      ;
+; 0.578 ; UART:Tout|state.sendBit                                      ; UART:Tout|TxOut                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.845      ;
+; 0.637 ; UART:Tout|TxEmpty                                            ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.903      ;
+; 0.652 ; UART:Tout|bitPointer[3]                                      ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.919      ;
+; 0.656 ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.922      ;
+; 0.656 ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.922      ;
+; 0.656 ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.922      ;
+; 0.657 ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.923      ;
+; 0.657 ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.923      ;
+; 0.658 ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.924      ;
+; 0.658 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.924      ;
+; 0.659 ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.925      ;
+; 0.659 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.925      ;
+; 0.661 ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.927      ;
+; 0.661 ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.927      ;
+; 0.662 ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.928      ;
+; 0.662 ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.928      ;
+; 0.662 ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.928      ;
+; 0.662 ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.928      ;
+; 0.667 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.934      ;
+; 0.683 ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.949      ;
+; 0.685 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.951      ;
+; 0.692 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[2]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 0.959      ;
+; 0.703 ; TXDriver:driver|dataPointer[1]                               ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.969      ;
+; 0.705 ; TXDriver:driver|dataPointer[3]                               ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.971      ;
+; 0.709 ; TXDriver:driver|dataPointer[2]                               ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.975      ;
+; 0.739 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.005      ;
+; 0.821 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[6]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.088      ;
+; 0.821 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[5]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.088      ;
+; 0.823 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[7]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.090      ;
+; 0.824 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[2]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.091      ;
+; 0.826 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[4]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.093      ;
+; 0.828 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[1]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.095      ;
+; 0.839 ; TXDriver:driver|XMitGo                                       ; UART:Tout|state.sendBit                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.106      ;
+; 0.852 ; UART:Tout|state.sendData                                     ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.119      ;
+; 0.876 ; UART:Tout|state.start                                        ; UART:Tout|TxEmpty                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.142      ;
+; 0.887 ; UART:Tout|state.sendBit                                      ; UART:Tout|state.sendData                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.082      ; 1.155      ;
+; 0.892 ; TXDriver:driver|dataPointer[4]                               ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.158      ;
+; 0.898 ; UART:Tout|state.start                                        ; UART:Tout|state.sendBit                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.164      ;
+; 0.938 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.205      ;
+; 0.950 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[0]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.217      ;
+; 0.974 ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.240      ;
+; 0.974 ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.240      ;
+; 0.974 ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.240      ;
+; 0.974 ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.240      ;
+; 0.975 ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.241      ;
+; 0.976 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.242      ;
+; 0.976 ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.242      ;
+; 0.980 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[3]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.247      ;
+; 0.985 ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.251      ;
+; 0.987 ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.253      ;
+; 0.988 ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.254      ;
+; 0.988 ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.254      ;
+; 0.989 ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.255      ;
+; 0.989 ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.255      ;
+; 0.989 ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.255      ;
+; 0.989 ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.255      ;
+; 0.990 ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.256      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 248.26 MHz ; 248.26 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; 15.972 ; 0.000          ;
++----------+--------+----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.354 ; 0.000          ;
++----------+-------+----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+-------+-------------------------------+
+; Clock    ; Slack ; End Point TNS                 ;
++----------+-------+-------------------------------+
+; CLOCK_50 ; 9.688 ; 0.000                         ;
++----------+-------+-------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                                                                                    ;
++--------+--------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                    ; To Node                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 15.972 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.970      ;
+; 15.972 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.970      ;
+; 15.972 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.970      ;
+; 15.972 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.970      ;
+; 15.972 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.970      ;
+; 15.973 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.969      ;
+; 15.973 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.969      ;
+; 15.973 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.969      ;
+; 15.973 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.969      ;
+; 15.973 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.969      ;
+; 15.977 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.965      ;
+; 15.977 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.965      ;
+; 15.977 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.965      ;
+; 15.977 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.965      ;
+; 15.977 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.965      ;
+; 15.988 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.961      ;
+; 15.988 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.961      ;
+; 15.989 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.960      ;
+; 15.989 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.960      ;
+; 15.989 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.960      ;
+; 15.990 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.952      ;
+; 15.990 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.952      ;
+; 15.990 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.952      ;
+; 15.990 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.952      ;
+; 15.990 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.952      ;
+; 15.991 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.958      ;
+; 15.998 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.944      ;
+; 15.998 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.944      ;
+; 15.998 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.944      ;
+; 15.998 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.944      ;
+; 15.998 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.944      ;
+; 16.058 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.891      ;
+; 16.058 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.891      ;
+; 16.059 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.890      ;
+; 16.059 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.890      ;
+; 16.059 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.890      ;
+; 16.061 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.888      ;
+; 16.115 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.827      ;
+; 16.116 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.826      ;
+; 16.120 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.822      ;
+; 16.129 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.820      ;
+; 16.129 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.820      ;
+; 16.130 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.819      ;
+; 16.130 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.819      ;
+; 16.130 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.819      ;
+; 16.131 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.818      ;
+; 16.131 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.818      ;
+; 16.132 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.817      ;
+; 16.132 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.817      ;
+; 16.132 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.817      ;
+; 16.132 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.817      ;
+; 16.133 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.809      ;
+; 16.133 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.816      ;
+; 16.133 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.816      ;
+; 16.134 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.815      ;
+; 16.134 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.815      ;
+; 16.134 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.815      ;
+; 16.134 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.815      ;
+; 16.136 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.813      ;
+; 16.140 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|state.start                                       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 3.806      ;
+; 16.140 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|state.sendData                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 3.806      ;
+; 16.141 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|updateNextClock                             ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.801      ;
+; 16.152 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.790      ;
+; 16.152 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.790      ;
+; 16.152 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.790      ;
+; 16.152 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.790      ;
+; 16.152 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.790      ;
+; 16.156 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.793      ;
+; 16.156 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.793      ;
+; 16.157 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.792      ;
+; 16.157 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.792      ;
+; 16.157 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.792      ;
+; 16.159 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.070     ; 3.790      ;
+; 16.174 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|state.start                                       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 3.772      ;
+; 16.174 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|state.sendData                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.073     ; 3.772      ;
+; 16.211 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 3.732      ;
+; 16.211 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 3.732      ;
+; 16.211 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 3.732      ;
+; 16.211 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 3.732      ;
+; 16.211 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.076     ; 3.732      ;
+; 16.217 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[6]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.728      ;
+; 16.217 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[5]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.728      ;
+; 16.217 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[4]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.728      ;
+; 16.217 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[2]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.728      ;
+; 16.217 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[3]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.728      ;
+; 16.217 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[0]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.728      ;
+; 16.217 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[1]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.728      ;
+; 16.217 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|localTxData[7]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.728      ;
+; 16.247 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[4]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.695      ;
+; 16.247 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[0]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.695      ;
+; 16.247 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[3]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.695      ;
+; 16.247 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[1]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.695      ;
+; 16.247 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[2]                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.077     ; 3.695      ;
+; 16.250 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.697      ;
+; 16.251 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.072     ; 3.696      ;
+; 16.251 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[6]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.694      ;
+; 16.251 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[5]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.694      ;
+; 16.251 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[4]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.694      ;
+; 16.251 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[2]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.694      ;
+; 16.251 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|localTxData[3]                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.074     ; 3.694      ;
++--------+--------------------------------------------------------------+-------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLOCK_50'                                                                                                                                                                     ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[0]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[4]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[6]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[7]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[8]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[9]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[12] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[4]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[4]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[0]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[2]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[3]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[3]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[7]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[5]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[5]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[6]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; UART:Tout|TxEmpty                                            ; UART:Tout|TxEmpty                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; UART:Tout|bitPointer[2]                                      ; UART:Tout|bitPointer[2]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; UART:Tout|bitPointer[3]                                      ; UART:Tout|bitPointer[3]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|bitPointer[0]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; UART:Tout|bitPointer[1]                                      ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.597      ;
+; 0.355 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|XMitGo                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.365 ; UART:Tout|state.sendData                                     ; UART:Tout|state.sendData                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.608      ;
+; 0.413 ; TXDriver:driver|dataPointer[0]                               ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.655      ;
+; 0.442 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.685      ;
+; 0.443 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[3]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.686      ;
+; 0.443 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[0]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.686      ;
+; 0.524 ; UART:Tout|state.sendBit                                      ; UART:Tout|TxOut                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.767      ;
+; 0.594 ; UART:Tout|TxEmpty                                            ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.836      ;
+; 0.596 ; UART:Tout|bitPointer[3]                                      ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.839      ;
+; 0.599 ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.842      ;
+; 0.599 ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.842      ;
+; 0.599 ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.842      ;
+; 0.600 ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.843      ;
+; 0.600 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.843      ;
+; 0.601 ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.844      ;
+; 0.601 ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.844      ;
+; 0.603 ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.846      ;
+; 0.603 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.846      ;
+; 0.604 ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.847      ;
+; 0.604 ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.847      ;
+; 0.604 ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.847      ;
+; 0.605 ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.848      ;
+; 0.605 ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.848      ;
+; 0.605 ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.848      ;
+; 0.610 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.853      ;
+; 0.624 ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.867      ;
+; 0.629 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.871      ;
+; 0.633 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[2]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.876      ;
+; 0.641 ; TXDriver:driver|dataPointer[1]                               ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.883      ;
+; 0.645 ; TXDriver:driver|dataPointer[3]                               ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.887      ;
+; 0.647 ; TXDriver:driver|dataPointer[2]                               ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.889      ;
+; 0.676 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.918      ;
+; 0.751 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[6]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.994      ;
+; 0.751 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[5]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.994      ;
+; 0.752 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[7]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.995      ;
+; 0.753 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[2]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.996      ;
+; 0.755 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[4]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.998      ;
+; 0.757 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[1]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.000      ;
+; 0.773 ; TXDriver:driver|XMitGo                                       ; UART:Tout|state.sendBit                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.016      ;
+; 0.791 ; UART:Tout|state.sendData                                     ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.034      ;
+; 0.811 ; UART:Tout|state.sendBit                                      ; UART:Tout|state.sendData                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 1.055      ;
+; 0.813 ; UART:Tout|state.start                                        ; UART:Tout|TxEmpty                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.055      ;
+; 0.829 ; UART:Tout|state.start                                        ; UART:Tout|state.sendBit                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.071      ;
+; 0.835 ; TXDriver:driver|dataPointer[4]                               ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 1.077      ;
+; 0.859 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.102      ;
+; 0.872 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[0]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.115      ;
+; 0.885 ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.128      ;
+; 0.885 ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.128      ;
+; 0.885 ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.128      ;
+; 0.886 ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.129      ;
+; 0.888 ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.131      ;
+; 0.889 ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.132      ;
+; 0.890 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.133      ;
+; 0.890 ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.133      ;
+; 0.891 ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.134      ;
+; 0.892 ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.135      ;
+; 0.892 ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.135      ;
+; 0.892 ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.135      ;
+; 0.893 ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.136      ;
+; 0.893 ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.136      ;
+; 0.893 ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.136      ;
+; 0.894 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[3]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.137      ;
+; 0.900 ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.143      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++----------+--------+----------------+
+; Clock    ; Slack  ; End Point TNS  ;
++----------+--------+----------------+
+; CLOCK_50 ; 17.814 ; 0.000          ;
++----------+--------+----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++----------+-------+----------------+
+; Clock    ; Slack ; End Point TNS  ;
++----------+-------+----------------+
+; CLOCK_50 ; 0.181 ; 0.000          ;
++----------+-------+----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++----------+-------+-------------------------------+
+; Clock    ; Slack ; End Point TNS                 ;
++----------+-------+-------------------------------+
+; CLOCK_50 ; 9.265 ; 0.000                         ;
++----------+-------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLOCK_50'                                                                                                                                                                     ;
++--------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 17.814 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.147      ;
+; 17.814 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.147      ;
+; 17.814 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.147      ;
+; 17.814 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.147      ;
+; 17.814 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.147      ;
+; 17.849 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.118      ;
+; 17.850 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.117      ;
+; 17.851 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.116      ;
+; 17.853 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.114      ;
+; 17.865 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.102      ;
+; 17.867 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.100      ;
+; 17.878 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.083      ;
+; 17.878 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.083      ;
+; 17.878 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.083      ;
+; 17.878 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.083      ;
+; 17.878 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.083      ;
+; 17.880 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.081      ;
+; 17.882 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.079      ;
+; 17.882 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.079      ;
+; 17.882 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.079      ;
+; 17.882 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.079      ;
+; 17.882 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.079      ;
+; 17.903 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.058      ;
+; 17.903 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.058      ;
+; 17.903 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.058      ;
+; 17.903 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.058      ;
+; 17.903 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.058      ;
+; 17.905 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.056      ;
+; 17.905 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.056      ;
+; 17.905 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.056      ;
+; 17.905 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.056      ;
+; 17.905 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.056      ;
+; 17.908 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.059      ;
+; 17.909 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.058      ;
+; 17.910 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.057      ;
+; 17.912 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.055      ;
+; 17.924 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.043      ;
+; 17.926 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 2.041      ;
+; 17.944 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.017      ;
+; 17.948 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.013      ;
+; 17.958 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.003      ;
+; 17.958 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.003      ;
+; 17.958 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.003      ;
+; 17.958 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.003      ;
+; 17.958 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 2.003      ;
+; 17.969 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 1.992      ;
+; 17.970 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.996      ;
+; 17.971 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 1.990      ;
+; 17.976 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.990      ;
+; 17.976 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.990      ;
+; 17.982 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[0]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.984      ;
+; 17.982 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 1.983      ;
+; 17.982 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; UART:Tout|state.sendData                                     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 1.983      ;
+; 17.983 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.983      ;
+; 17.985 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.982      ;
+; 17.986 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.981      ;
+; 17.987 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.979      ;
+; 17.987 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.980      ;
+; 17.988 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.974      ;
+; 17.988 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.974      ;
+; 17.988 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.974      ;
+; 17.988 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.974      ;
+; 17.988 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.045     ; 1.974      ;
+; 17.989 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.978      ;
+; 17.991 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.976      ;
+; 17.991 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 1.970      ;
+; 17.991 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 1.970      ;
+; 17.991 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 1.970      ;
+; 17.991 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 1.970      ;
+; 17.991 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.046     ; 1.970      ;
+; 17.992 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.975      ;
+; 17.993 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.974      ;
+; 17.995 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.972      ;
+; 17.996 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.971      ;
+; 17.997 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.970      ;
+; 17.997 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.970      ;
+; 17.998 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.969      ;
+; 17.998 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.969      ;
+; 17.998 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.969      ;
+; 17.999 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[7]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.967      ;
+; 17.999 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.968      ;
+; 17.999 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.968      ;
+; 18.000 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[4]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.966      ;
+; 18.000 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[0]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.966      ;
+; 18.000 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[6]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.041     ; 1.966      ;
+; 18.000 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.967      ;
+; 18.000 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.967      ;
+; 18.001 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.966      ;
+; 18.001 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.966      ;
+; 18.002 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 1.963      ;
+; 18.002 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; UART:Tout|state.sendData                                     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.042     ; 1.963      ;
+; 18.002 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.965      ;
+; 18.003 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.964      ;
+; 18.004 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.963      ;
+; 18.004 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.963      ;
+; 18.005 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.962      ;
+; 18.005 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.962      ;
+; 18.006 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[12] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.961      ;
+; 18.006 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.961      ;
+; 18.006 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[4]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.040     ; 1.961      ;
++--------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLOCK_50'                                                                                                                                                                     ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                    ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[4]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[4]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[5]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[6]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[6]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[7]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[7]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[8]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[8]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[9]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[9]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[10] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[11] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|XMitGo                                       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[15]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[14]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[4]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[4]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[0]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[0]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[2]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[3]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[3]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[7]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[5]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[5]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[6]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[9]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[10]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[11]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[12]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo1k|Q[13]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; UART:Tout|TxEmpty                                            ; UART:Tout|TxEmpty                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.307      ;
+; 0.182 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[0]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[0]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[1]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[2]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[3]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[12] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[12] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[13] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[14] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; TXDriver:driver|enableEverySec:enab|counter:CountTo50k|Q[15] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; UART:Tout|bitPointer[2]                                      ; UART:Tout|bitPointer[2]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; UART:Tout|bitPointer[3]                                      ; UART:Tout|bitPointer[3]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|bitPointer[0]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; UART:Tout|bitPointer[1]                                      ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.307      ;
+; 0.189 ; UART:Tout|state.sendData                                     ; UART:Tout|state.sendData                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.314      ;
+; 0.207 ; TXDriver:driver|dataPointer[0]                               ; TXDriver:driver|dataPointer[0]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.333      ;
+; 0.216 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[3]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.341      ;
+; 0.216 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[0]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.341      ;
+; 0.216 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.341      ;
+; 0.266 ; UART:Tout|state.sendBit                                      ; UART:Tout|TxOut                                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.392      ;
+; 0.277 ; UART:Tout|TxEmpty                                            ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.403      ;
+; 0.299 ; UART:Tout|bitPointer[3]                                      ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.424      ;
+; 0.299 ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.424      ;
+; 0.300 ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.300 ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.425      ;
+; 0.301 ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.301 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.426      ;
+; 0.302 ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.302 ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.302 ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.302 ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.427      ;
+; 0.303 ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.428      ;
+; 0.303 ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.428      ;
+; 0.306 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|bitPointer[1]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.431      ;
+; 0.312 ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.437      ;
+; 0.313 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.439      ;
+; 0.318 ; UART:Tout|state.sendData                                     ; UART:Tout|bitPointer[2]                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.443      ;
+; 0.325 ; TXDriver:driver|dataPointer[3]                               ; TXDriver:driver|dataPointer[3]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.451      ;
+; 0.327 ; TXDriver:driver|dataPointer[1]                               ; TXDriver:driver|dataPointer[1]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.453      ;
+; 0.329 ; TXDriver:driver|dataPointer[2]                               ; TXDriver:driver|dataPointer[2]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.455      ;
+; 0.337 ; TXDriver:driver|XMitGo                                       ; TXDriver:driver|updateNextClock                              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.463      ;
+; 0.375 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[6]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.501      ;
+; 0.376 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[5]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.502      ;
+; 0.378 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[2]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.504      ;
+; 0.378 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[7]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.504      ;
+; 0.381 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[4]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.507      ;
+; 0.383 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[1]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.509      ;
+; 0.383 ; UART:Tout|state.sendData                                     ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.508      ;
+; 0.385 ; TXDriver:driver|XMitGo                                       ; UART:Tout|state.sendBit                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.511      ;
+; 0.395 ; UART:Tout|state.sendBit                                      ; UART:Tout|state.sendData                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.521      ;
+; 0.395 ; UART:Tout|state.start                                        ; UART:Tout|TxEmpty                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.520      ;
+; 0.407 ; TXDriver:driver|dataPointer[4]                               ; TXDriver:driver|dataPointer[4]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.533      ;
+; 0.410 ; UART:Tout|state.start                                        ; UART:Tout|state.sendBit                                      ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.535      ;
+; 0.429 ; UART:Tout|bitPointer[0]                                      ; UART:Tout|state.start                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.554      ;
+; 0.436 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[0]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.562      ;
+; 0.449 ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.574      ;
+; 0.449 ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.574      ;
+; 0.449 ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.574      ;
+; 0.449 ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.574      ;
+; 0.449 ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.574      ;
+; 0.450 ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
+; 0.450 ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.575      ;
+; 0.453 ; TXDriver:driver|XMitGo                                       ; UART:Tout|localTxData[3]                                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 0.579      ;
+; 0.459 ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; baudlimit:limiter|counter:CountTo1k|Q[1]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.584      ;
+; 0.459 ; baudlimit:limiter|counter:CountTo1k|Q[6]                     ; baudlimit:limiter|counter:CountTo1k|Q[7]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.584      ;
+; 0.460 ; baudlimit:limiter|counter:CountTo1k|Q[14]                    ; baudlimit:limiter|counter:CountTo1k|Q[15]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.585      ;
+; 0.460 ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; baudlimit:limiter|counter:CountTo1k|Q[3]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.585      ;
+; 0.460 ; baudlimit:limiter|counter:CountTo1k|Q[4]                     ; baudlimit:limiter|counter:CountTo1k|Q[5]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.585      ;
+; 0.460 ; baudlimit:limiter|counter:CountTo1k|Q[8]                     ; baudlimit:limiter|counter:CountTo1k|Q[9]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.585      ;
+; 0.461 ; baudlimit:limiter|counter:CountTo1k|Q[10]                    ; baudlimit:limiter|counter:CountTo1k|Q[11]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.586      ;
+; 0.461 ; baudlimit:limiter|counter:CountTo1k|Q[12]                    ; baudlimit:limiter|counter:CountTo1k|Q[13]                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.586      ;
+; 0.462 ; baudlimit:limiter|counter:CountTo1k|Q[0]                     ; baudlimit:limiter|counter:CountTo1k|Q[2]                     ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.587      ;
++-------+--------------------------------------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 15.623 ; 0.181 ; N/A      ; N/A     ; 9.265               ;
+;  CLOCK_50        ; 15.623 ; 0.181 ; N/A      ; N/A     ; 9.265               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50        ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; GPIO[1]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; KEY[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK_50                ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; GPIO[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.58e-08 V                   ; 3.13 V              ; -0.117 V            ; 0.143 V                              ; 0.259 V                              ; 6.22e-10 s                  ; 4.46e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 1.58e-08 V                  ; 3.13 V             ; -0.117 V           ; 0.143 V                             ; 0.259 V                             ; 6.22e-10 s                 ; 4.46e-10 s                 ; No                        ; No                        ;
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; GPIO[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 1.9e-06 V                    ; 3.11 V              ; -0.0625 V           ; 0.224 V                              ; 0.17 V                               ; 6.86e-10 s                  ; 6.31e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 1.9e-06 V                   ; 3.11 V             ; -0.0625 V          ; 0.224 V                             ; 0.17 V                              ; 6.86e-10 s                 ; 6.31e-10 s                 ; Yes                       ; No                        ;
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; GPIO[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 2985     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 2985     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 73    ; 73   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 2     ; 2    ;
++---------------------------------+-------+------+
+
+
++------------------------------------------+
+; Clock Status Summary                     ;
++----------+----------+------+-------------+
+; Target   ; Clock    ; Type ; Status      ;
++----------+----------+------+-------------+
+; CLOCK_50 ; CLOCK_50 ; Base ; Constrained ;
++----------+----------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; GPIO[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; GPIO[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Fri May 25 15:02:34 2018
+Info: Command: quartus_sta UARTCombined -c UARTCombined
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'UARTCombined.sdc'
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From CLOCK_50 (Rise) to CLOCK_50 (Rise) (setup and hold)
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332146): Worst-case setup slack is 15.623
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    15.623               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.402
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.402               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.680
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.680               0.000 CLOCK_50 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From CLOCK_50 (Rise) to CLOCK_50 (Rise) (setup and hold)
+Info (332146): Worst-case setup slack is 15.972
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    15.972               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.354
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.354               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.688
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.688               0.000 CLOCK_50 
+Info: Analyzing Fast 1200mV 0C Model
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From CLOCK_50 (Rise) to CLOCK_50 (Rise) (setup and hold)
+Info (332146): Worst-case setup slack is 17.814
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    17.814               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.181
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.181               0.000 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.265
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     9.265               0.000 CLOCK_50 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 747 megabytes
+    Info: Processing ended: Fri May 25 15:02:38 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

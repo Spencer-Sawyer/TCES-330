@@ -1,0 +1,24 @@
+module FullAdder(input a, input b, input carry_in,output result, output carry_out);
+
+result = xor(carry_in,xor(a,b));
+carry_out=a&b|b&carry_in|carry_in&a;
+
+
+
+endmodule
+module FullAdder_testbench()
+reg a;
+reg b;
+reg carry_in;
+reg result;
+reg carry_out;
+
+FullAdder(a,b,carry_in,result,carry_out);
+
+
+
+
+
+
+
+endmodule

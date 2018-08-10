@@ -1,0 +1,12 @@
+module Processor(input clock, //clock
+		input reset,   			//synchronous reset
+		output [15:0] IR_Out,	//instruction register out
+		output PC_Out,			//program counter out
+		output State, 			//Current state
+		output NextState,  	 	//Next State
+		output [15:0] ALU_A, 	//ALU side A
+		output [15:0] ALU_B,	//ALU side B
+		output [15:0] ALU_Out);	//ALU output
+	
+						
+endmodule 

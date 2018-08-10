@@ -1,0 +1,21 @@
+Quartus Prime Archive log --	C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/midterm/MT1_1a/MT1_1a_tmp_archive.qarlog
+
+Archive:	C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/midterm/MT1_1a/MT1_1a_tmp_archive.qar
+Date:		Wed May 02 11:13:02 2018
+Quartus Prime		17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/midterm/MT1_1a/MT1_1a.qpf
+C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/midterm/MT1_1a/MT1_1a.qsf
+C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/midterm/MT1_1a/MT1_1a.sv
+c:/intelfpga_lite/17.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 4 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Wed May 02 11:13:04 2018
+Source archive file:	C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/midterm/MT1_1a/MT1_1a_tmp_archive.qar
+Archive was extracted into	C:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/midterm/MT1_1c/
+		 - successfully.

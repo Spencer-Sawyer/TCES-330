@@ -1,0 +1,4 @@
+module BCD_Add(input [0:3]bcd1,input [0:3]bcd2,input carry_in, output [0:3] result,output carry_out);
+wire [0:3]intermediateResult;
+
+endmodule 

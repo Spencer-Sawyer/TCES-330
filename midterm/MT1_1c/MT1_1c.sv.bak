@@ -1,0 +1,30 @@
+//spencer sawyer
+
+
+module MT1_1c(input [2:0] b,output[0:2] g);
+assign g[2]=b[2];
+assign g[1]=(~b[2]&b[1]|b[2]&~b[1]);
+assign g[0]=(~b[1]&b[0]|b[1]&~b[0]);
+
+
+endmodule
+
+module MT1_1cTestBench();
+reg [0:2] in;
+
+reg [0:2] out;
+
+MT1_1a test(in,out);
+
+initial
+begin
+for(int i =0;i<8;i++)
+begin
+in=i;
+#10;
+end
+
+end
+
+
+endmodule 

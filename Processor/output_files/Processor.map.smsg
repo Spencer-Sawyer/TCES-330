@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at Processor.sv(5): object "state" differs only in case from object "State" in the same scope File: C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/Processor/Processor.sv Line: 5
+Info (10281): Verilog HDL Declaration information at Processor.sv(6): object "nextState" differs only in case from object "NextState" in the same scope File: C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/Processor/Processor.sv Line: 6

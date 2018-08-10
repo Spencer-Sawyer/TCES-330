@@ -1,0 +1,24 @@
+Quartus Prime Archive log --	C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/Part1_tmp_archive.qarlog
+
+Archive:	C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/Part1_tmp_archive.qar
+Date:		Sun May 06 11:31:59 2018
+Quartus Prime		17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/Counter.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/HexHEXd.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/Part1.qpf
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/Part1.qsf
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/Part1.sv
+C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/Tff.sv
+c:/intelfpga_lite/17.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 7 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sun May 06 11:32:01 2018
+Source archive file:	C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part1/Part1_tmp_archive.qar
+Archive was extracted into	C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/hw3/part2/
+		 - successfully.

@@ -1,0 +1,405 @@
+module Processor(input clock, 		//clock
+		input reset,   				//synchronous reset
+		output [15:0] IR_Out,		//instruction register out
+		output [4:0] PC_Out,		//program counter out
+		output reg [3:0] state, //Current state
+		output reg [3:0] nextState,  	//Next State
+		output reg[15:0] ALU_A, 	//ALU side A
+		output reg[15:0] ALU_B,		//ALU side B
+		output reg[15:0] ALU_Out);	//ALU output
+	reg [3:0] operation;
+	reg [7:0] PC = 0;
+	reg [15:0] instruction ;
+	reg [3:0] State = 4'b1111; //start at init, Also note that we have State here because otherwise quartus won't recognize this as a state machine
+	reg [3:0] NextState = 0;
+	assign state = State; // assign our output state as state
+	assign nextState = NextState;
+	instructionMemory rom(PC, clock,instruction); //get the next instruction.
+	assign operation = instruction[15:12];
+	assign PC_Out = PC [4:0];
+	assign IR_Out = instruction;
+	
+	reg [7:0] RamLocation;
+	reg RamWrite = 0;
+	reg [3:0] RamReg;
+	reg [15:0] DataToRam;
+	reg [15:0] DataFromRam;
+	
+	reg regWrite = 0;
+	reg [3:0]regWriteAddr;
+	reg [3:0]regReadAddrA;
+	reg [3:0]regReadAddrB;
+	
+	reg [15:0] regWriteData;
+	reg [15:0] regReadDataA;
+	reg [15:0] regReadDataB;
+	
+	reg [3:0] ALUselect;
+	ram readwrite(RamLocation,~clock,DataToRam,RamWrite,DataFromRam);
+	
+	localparam 
+		init	= 4'b1111, //Start from the highest bit for the states that don't have a corresponding instruction
+		fetch 	= 4'b1110,
+		load_2	= 4'b1101,
+		NOOP 	= 4'b0000,//make instructions equal to their states
+		STORE 	= 4'b0001,
+		LOAD	= 4'b0010,
+		ADD		= 4'b0011,
+		SUBTRACT= 4'b0100,
+		HALT 	= 4'b0101;
+	RegisterFile regs(  clock, reset, regWrite, regWriteAddr, regWriteData, regReadAddrA, regReadAddrB, 1, 1, regReadDataA, regReadDataB );
+	ALU arithmaticAndLogic(ALUselect,ALU_A,ALU_B,ALU_Out);
+	   /*
+ 		*Stuff that is set by the state machine
+ 		regReadAddrA
+		regReadAddrB
+		regWriteAddr
+		ALU_A
+		ALU_B
+		regWriteData
+		regWrite
+		ALUselect
+		RamWrite
+		RamLocation
+		DataToRam
+ 		* 
+ 		* 
+ 		* 
+ 		*/
+	/* Stuff that is used in the state machine and should be set outside of it.
+	 * 
+	 * 			instruction
+	 * 			DataFromRam
+	 * 			regReadDataA
+	 * 			regReadDataB
+	 * 			ALU_Out
+	 * 
+	 * 
+	 * 
+	 **/
+	
+	
+	
+	always_comb
+	begin
+	
+		case(State)
+			init:
+			begin
+				if(reset)				
+						NextState = fetch;
+					else
+						NextState=init;
+				
+			end
+			fetch: 
+			begin
+				if(reset)
+					NextState=init;
+				else
+					begin
+						case(operation)
+							NOOP:
+								NextState = NOOP;
+							STORE:
+								NextState = STORE;
+							LOAD:
+								NextState = LOAD;
+							ADD:
+								NextState = ADD;
+							SUBTRACT:
+								NextState = SUBTRACT;
+							HALT:
+								NextState = HALT;
+							default:
+								NextState = NOOP;
+								
+						
+						endcase
+					end
+			end
+			load_2:
+			begin
+				if(reset)
+					NextState=init;
+				else
+					begin
+						NextState = fetch;
+		
+					end
+			end
+			NOOP:
+			begin
+				if(reset)
+					NextState=init;
+				else
+			begin
+				NextState = fetch;
+			end		
+			end
+			STORE:begin
+				if(reset)
+					NextState=init;
+				else
+			begin
+				NextState = fetch;
+			end
+			end
+			LOAD:
+			begin
+				if(reset)
+					NextState=init;
+				else
+			begin
+				NextState = load_2;
+				
+			end
+			end
+			ADD:
+			begin
+				if(reset)
+					NextState=init;
+				else
+			begin
+				NextState = fetch;
+				
+			end
+			end
+			SUBTRACT:
+			begin
+				if(reset)
+					NextState=init;
+				else
+			begin
+				
+				NextState = fetch;
+
+			end
+			end
+			HALT:
+			begin
+				if(reset)
+					NextState=init;
+				else
+			begin
+				
+				NextState = HALT;
+			end
+			end
+			default:
+			begin
+				if(reset)
+					NextState=init;
+				else
+			begin
+				NextState = fetch;
+			end
+		end
+		
+		
+		
+		endcase
+	end
+	always_comb
+	begin
+		case(State)
+			init:
+			begin
+				regReadAddrA = 0;
+				regReadAddrB = 0;
+				regWriteAddr = 0;
+				ALU_A= 0;
+				ALU_B= 0;
+				regWriteData= 0;
+				regWrite= 0;
+				ALUselect= 0;
+				RamWrite= 0;
+				RamLocation= 0;
+				DataToRam= 0;
+				
+				
+			end
+			fetch: 
+			begin			
+				regReadAddrA = 0;
+				regReadAddrB = 0;
+				regWriteAddr = 0;
+				ALU_A= 0;
+				ALU_B= 0;
+				regWriteData= 0;
+				regWrite= 0;
+				ALUselect= 0;
+				RamWrite= 0;
+				RamLocation= 0;
+				DataToRam= 0;
+			end
+			load_2:
+			begin
+				regWriteAddr=instruction[3:0];
+				regWrite=1;
+				regWriteData=DataFromRam;
+				RamWrite=0;
+				RamLocation=instruction[11:4];
+				
+				regReadAddrA = 0;
+				regReadAddrB = 0;
+			
+				ALU_A= DataFromRam;
+				ALU_B= instruction[11:4];
+			
+			
+				ALUselect= 0;
+				
+				
+				DataToRam= 0;
+			end
+			NOOP:
+			begin
+				regReadAddrA = 0;
+				regReadAddrB = 0;
+				regWriteAddr = 0;
+				ALU_A= 0;
+				ALU_B= 0;
+				regWriteData= 0;
+				regWrite= 0;
+				ALUselect= 0;
+				RamWrite= 0;
+				RamLocation= 0;
+				DataToRam= 0;
+				
+			end		
+			STORE:
+			begin
+				regReadAddrA=instruction[11:8];
+				DataToRam=regReadDataA;
+				RamWrite=1;
+				RamLocation=instruction[7:0];
+				
+				
+				
+				regReadAddrB = 0;
+				regWriteAddr = 0;
+				ALU_A= 0;
+				ALU_B= 0;
+				regWriteData= 0;
+				regWrite= 0;
+				ALUselect= 0;
+				
+				
+				
+			end
+			LOAD:
+			begin
+				regWriteAddr=instruction[3:0];
+				regWrite=1;
+				RamWrite=0;
+				regWriteData=DataFromRam;
+				RamLocation=instruction[11:4];
+				
+				regReadAddrA = 0;
+				regReadAddrB = 0;
+
+				ALU_A= DataFromRam;
+				ALU_B= instruction[11:4];
+				
+				
+				ALUselect= 0;
+			
+				
+				DataToRam= 0;
+			end
+			ADD:
+			begin
+				regReadAddrA=instruction[11:8];
+				regReadAddrB=instruction[7:4];
+				regWriteAddr=instruction[3:0];
+				ALU_A=regReadDataA;
+				ALU_B=regReadDataB;
+				regWriteData=ALU_Out;
+				regWrite=1;
+				ALUselect=0;
+				
+			
+				RamWrite= 0;
+				RamLocation= 0;
+				DataToRam= 0;
+				
+			end
+			SUBTRACT:
+			begin
+				regReadAddrA=instruction[11:8];
+				regReadAddrB=instruction[7:4];
+				regWriteAddr=instruction[3:0];
+				ALU_A=regReadDataA;
+				ALU_B=regReadDataB;
+				regWriteData=ALU_Out;
+				regWrite=1;
+				ALUselect=1;
+				
+	
+				RamWrite= 0;
+				RamLocation= 0;
+				DataToRam= 0;
+				
+			end
+			HALT:
+			begin
+				regReadAddrA = 0;
+				regReadAddrB = 0;
+				regWriteAddr = 0;
+				ALU_A= 0;
+				ALU_B= 0;
+				regWriteData= 0;
+				regWrite= 0;
+				ALUselect= 0;
+				RamWrite= 0;
+				RamLocation= 0;
+				DataToRam= 0;
+				
+
+			end
+			default:
+			begin
+				regReadAddrA = 0;
+				regReadAddrB = 0;
+				regWriteAddr = 0;
+				ALU_A= 0;
+				ALU_B= 0;
+				regWriteData= 0;
+				regWrite= 0;
+				ALUselect= 0;
+				RamWrite= 0;
+				RamLocation= 0;
+				DataToRam= 0;
+
+			end
+			
+	
+			
+		endcase
+		
+	end
+	
+	
+	always_ff @ (posedge clock)
+	begin
+	
+		State <= NextState;
+		case(State)
+			fetch:
+			begin
+				PC <=PC+1;
+			end
+			init:
+			begin
+			PC<=0;
+			end
+		
+		endcase
+	
+		
+	end
+	
+	
+						
+endmodule 

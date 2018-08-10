@@ -1,0 +1,13 @@
+
+State Machine - |Part2|FSMPart2:toDigit|CurrentState
+Name CurrentState.nine CurrentState.eight CurrentState.seven CurrentState.six CurrentState.five CurrentState.four CurrentState.three CurrentState.two CurrentState.one CurrentState.0000 
+CurrentState.0000 0 0 0 0 0 0 0 0 0 0 
+CurrentState.one 0 0 0 0 0 0 0 0 1 1 
+CurrentState.two 0 0 0 0 0 0 0 1 0 1 
+CurrentState.three 0 0 0 0 0 0 1 0 0 1 
+CurrentState.four 0 0 0 0 0 1 0 0 0 1 
+CurrentState.five 0 0 0 0 1 0 0 0 0 1 
+CurrentState.six 0 0 0 1 0 0 0 0 0 1 
+CurrentState.seven 0 0 1 0 0 0 0 0 0 1 
+CurrentState.eight 0 1 0 0 0 0 0 0 0 1 
+CurrentState.nine 1 0 0 0 0 0 0 0 0 1 

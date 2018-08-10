@@ -1,0 +1,12 @@
+module BCD_2d_ADD(input [3:0]bcdA1,input [3:0]bcdA2,input [3:0]bcdB1,input [3:0]bcdB2, output [3:0] hundreds, output [3:0] tens,output [3:0]ones);
+
+wire [0:3]ones;
+wire [0:3]tens1;
+wire [0:3]tens2;
+wire [0:3]hundreds;
+
+BCD_ADD(bcdA1,bcdB1,0,
+
+
+
+endmodule 

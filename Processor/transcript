@@ -1,0 +1,1927 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:50 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 22:35:50 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:50 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 22:35:50 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:50 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 22:35:51 on Jun 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:51 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 22:35:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:51 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 22:35:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:51 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 22:35:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:51 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 22:35:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:35:51 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 22:35:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 22:35:51 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./runlab.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint  \
+sim:/testProcessor/Clk \
+sim:/testProcessor/Reset \
+sim:/testProcessor/IR_Out \
+sim:/testProcessor/PC_Out \
+sim:/testProcessor/State \
+sim:/testProcessor/NextState \
+sim:/testProcessor/ALU_A \
+sim:/testProcessor/ALU_B \
+sim:/testProcessor/ALU_Out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/Processor/wave.do}
+run -all
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = 01b5  ALU B = 0000 ALU Out = 01b5
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 0000 ALU Out = 10ac
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(35)
+#    Time: 410 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 35
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+quit -sim
+# End time: 22:48:43 on Jun 07,2018, Elapsed time: 0:12:52
+# Errors: 4, Warnings: 5
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:50 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 22:48:50 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:50 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 22:48:50 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:50 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 22:48:50 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:50 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 22:48:51 on Jun 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:51 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 22:48:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:51 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 22:48:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:51 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 22:48:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:48:51 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 22:48:51 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 22:48:51 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = 01b5  ALU B = 0006 ALU Out = 01bb
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(35)
+#    Time: 410 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 35
+quit -sim
+# End time: 22:52:29 on Jun 07,2018, Elapsed time: 0:03:38
+# Errors: 0, Warnings: 4
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:52:33 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 22:52:33 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:52:33 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 22:52:34 on Jun 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:52:34 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 22:52:34 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:52:34 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 22:52:34 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:52:34 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 22:52:34 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:52:34 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 22:52:34 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:52:34 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 22:52:34 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:52:34 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 22:52:34 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 22:52:34 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(35)
+#    Time: 410 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 35
+quit -sim
+# End time: 22:55:16 on Jun 07,2018, Elapsed time: 0:02:42
+# Errors: 0, Warnings: 4
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:55:19 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 22:55:19 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:55:19 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 22:55:20 on Jun 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:55:20 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 22:55:20 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:55:20 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 22:55:20 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:55:20 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 22:55:20 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:55:20 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 22:55:20 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:55:20 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 22:55:20 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:55:20 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 22:55:20 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 22:55:20 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = 01b5  ALU B = 0006 ALU Out = 01bb
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(35)
+#    Time: 410 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 35
+quit -sim
+# End time: 23:03:49 on Jun 07,2018, Elapsed time: 0:08:29
+# Errors: 0, Warnings: 4
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:53 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 23:03:53 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:53 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 23:03:53 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:53 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 23:03:53 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:53 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 23:03:53 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:53 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 23:03:53 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:53 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 23:03:53 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:53 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 23:03:53 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:03:53 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:03:53 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 23:03:53 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 100000 : Reset = 0  State = d  ALU A = 01b5  ALU B = 001b ALU Out = 01d0
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = 01b5  ALU B = 0006 ALU Out = 01bb
+# Time is 140000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 160000 : Reset = 0  State = d  ALU A = 10ac  ALU B = 0006 ALU Out = 10b2
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 200000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 220000 : Reset = 0  State = d  ALU A = a040  ALU B = 008a ALU Out = a0ca
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 01b5 ALU Out = fe4b
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 10ac  ALU B = fe4b ALU Out = 1261
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 1261  ALU B = a040 ALU Out = b2a1
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = b2a1  ALU B = 0000 ALU Out = b2a1
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(35)
+#    Time: 410 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 35
+step -over
+run
+# Time is 410000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+run
+run -continue
+run -continue
+run -continue
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step -over
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+step
+# Error opening C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v
+# Path name 'C:/build/swbuild/SJ/nightly/17.0std/595/l64/work/modelsim/eda/sim_lib/altera_mf.v' doesn't exist.
+# Break key hit
+step -out -current
+# Requested step location(s) not found!
+step -out -current
+# Requested step location(s) not found!
+quit -sim
+# End time: 23:22:31 on Jun 07,2018, Elapsed time: 0:18:38
+# Errors: 35, Warnings: 4
+quit -sim
+step -out -current
+# Active dataset is not in simulation mode
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:22:42 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 23:22:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:22:42 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 23:22:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:22:42 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 23:22:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:22:42 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 23:22:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:22:42 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 23:22:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:22:42 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 23:22:43 on Jun 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:22:43 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 23:22:43 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:22:43 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:22:43 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 23:22:43 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 100000 : Reset = 0  State = d  ALU A = 01b5  ALU B = 001b ALU Out = 01d0
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = 01b5  ALU B = 0006 ALU Out = 01bb
+# Time is 140000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 160000 : Reset = 0  State = d  ALU A = 10ac  ALU B = 0006 ALU Out = 10b2
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 200000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 220000 : Reset = 0  State = d  ALU A = a040  ALU B = 008a ALU Out = a0ca
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 01b5 ALU Out = fe4b
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 10ac  ALU B = fe4b ALU Out = 1261
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 1261  ALU B = a040 ALU Out = b2a1
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = b2a1  ALU B = 0000 ALU Out = b2a1
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 410000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 430000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 450000 : Reset = 0  State = 5  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(36)
+#    Time: 460 ns  Iteration: 0  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 36
+quit -sim
+# End time: 23:24:44 on Jun 07,2018, Elapsed time: 0:02:01
+# Errors: 0, Warnings: 4
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:24:46 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 23:24:46 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:24:46 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 23:24:47 on Jun 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:24:47 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 23:24:47 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:24:47 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 23:24:47 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:24:47 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 23:24:47 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:24:47 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 23:24:47 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:24:47 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 23:24:47 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:24:47 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:24:47 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 23:24:47 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(50): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 100000 : Reset = 0  State = d  ALU A = 01b5  ALU B = 001b ALU Out = 01d0
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = 01b5  ALU B = 0006 ALU Out = 01bb
+# Time is 140000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 160000 : Reset = 0  State = d  ALU A = 10ac  ALU B = 0006 ALU Out = 10b2
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 200000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 220000 : Reset = 0  State = d  ALU A = a040  ALU B = 008a ALU Out = a0ca
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 01b5 ALU Out = fe4b
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 10ac  ALU B = fe4b ALU Out = 1261
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 1261  ALU B = a040 ALU Out = b2a1
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = b2a1  ALU B = 0000 ALU Out = b2a1
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 410000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 430000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 450000 : Reset = 0  State = 5  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(36)
+#    Time: 510 ns  Iteration: 0  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 36
+quit -sim
+# End time: 23:32:32 on Jun 07,2018, Elapsed time: 0:07:45
+# Errors: 0, Warnings: 4
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:36 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 23:32:36 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:36 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 23:32:36 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:36 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 23:32:36 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:36 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 23:32:36 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:36 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 23:32:36 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:36 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 23:32:36 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:36 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 23:32:37 on Jun 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:32:37 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:32:37 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 23:32:37 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(52): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 100000 : Reset = 0  State = d  ALU A = cc05  ALU B = 000b ALU Out = cc10
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = cc05  ALU B = 0006 ALU Out = cc0b
+# Time is 140000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 160000 : Reset = 0  State = d  ALU A = 10ac  ALU B = 0006 ALU Out = 10b2
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 200000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 220000 : Reset = 0  State = d  ALU A = a040  ALU B = 008a ALU Out = a0ca
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = cc05  ALU B = 0000 ALU Out = cc05
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = cc05  ALU B = 0000 ALU Out = cc05
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 10ac  ALU B = cc05 ALU Out = dcb1
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = dcb1  ALU B = a040 ALU Out = 3c71
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 410000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 430000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 450000 : Reset = 0  State = 5  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(36)
+#    Time: 530 ns  Iteration: 0  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 36
+quit -sim
+# End time: 23:50:01 on Jun 07,2018, Elapsed time: 0:17:24
+# Errors: 0, Warnings: 4
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:50:06 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 23:50:06 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:50:06 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 23:50:06 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:50:06 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 23:50:06 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:50:06 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 23:50:06 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:50:06 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 23:50:06 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:50:06 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 23:50:06 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:50:06 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 23:50:06 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:50:06 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:50:07 on Jun 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 23:50:07 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(52): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 10000 : Reset = 1  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = 0  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 90000 : Reset = 0  State = d  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = 2  ALU A = cc05  ALU B = 0006 ALU Out = cc0b
+# Time is 150000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 170000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 230000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 3  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 410000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 430000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 450000 : Reset = 0  State = 5  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(36)
+#    Time: 530 ns  Iteration: 0  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 36
+quit -sim
+# End time: 23:58:38 on Jun 07,2018, Elapsed time: 0:08:31
+# Errors: 0, Warnings: 4
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:58:41 on Jun 07,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 23:58:41 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:58:41 on Jun 07,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 23:58:41 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:58:41 on Jun 07,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 23:58:41 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:58:41 on Jun 07,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 23:58:41 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:58:42 on Jun 07,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 23:58:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:58:42 on Jun 07,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 23:58:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:58:42 on Jun 07,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 23:58:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:58:42 on Jun 07,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 23:58:42 on Jun 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 23:58:42 on Jun 07,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(52): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 70000 : Reset = 0  State = d  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 90000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 110000 : Reset = 0  State = 2  ALU A = cc05  ALU B = 001b ALU Out = cc20
+# Time is 130000 : Reset = 0  State = d  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 150000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 170000 : Reset = 0  State = 2  ALU A = 01b5  ALU B = 0006 ALU Out = 01bb
+# Time is 190000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 210000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 230000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 250000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 3  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 410000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 430000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 450000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 470000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 490000 : Reset = 0  State = 5  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(36)
+#    Time: 570 ns  Iteration: 0  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 36
+quit -sim
+# End time: 00:01:33 on Jun 08,2018, Elapsed time: 0:02:51
+# Errors: 0, Warnings: 4
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:36 on Jun 08,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 00:01:36 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:36 on Jun 08,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 00:01:36 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:36 on Jun 08,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 00:01:36 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:36 on Jun 08,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 00:01:36 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:37 on Jun 08,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 00:01:37 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:37 on Jun 08,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 00:01:37 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:37 on Jun 08,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 00:01:37 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:01:37 on Jun 08,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 00:01:37 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 00:01:37 on Jun 08,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(51): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(52): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 70000 : Reset = 0  State = d  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 90000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 110000 : Reset = 0  State = 2  ALU A = cc05  ALU B = 001b ALU Out = cc20
+# Time is 130000 : Reset = 0  State = d  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 150000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 170000 : Reset = 0  State = 2  ALU A = 01b5  ALU B = 0006 ALU Out = 01bb
+# Time is 190000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 210000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 230000 : Reset = 0  State = 2  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 250000 : Reset = 0  State = d  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 310000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = 3  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 390000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 410000 : Reset = 0  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 430000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 450000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 470000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 490000 : Reset = 0  State = 5  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(36)
+#    Time: 570 ns  Iteration: 0  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 36
+quit -sim
+# End time: 01:15:58 on Jun 08,2018, Elapsed time: 1:14:21
+# Errors: 0, Warnings: 4
+quit -sim
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:16:02 on Jun 08,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 01:16:02 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:16:02 on Jun 08,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 01:16:02 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:16:02 on Jun 08,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 01:16:03 on Jun 08,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:16:03 on Jun 08,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 01:16:03 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:16:03 on Jun 08,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 01:16:03 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:16:03 on Jun 08,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 01:16:03 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:16:03 on Jun 08,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 01:16:03 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:16:03 on Jun 08,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 01:16:03 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 01:16:03 on Jun 08,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(53): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = d  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 000b ALU Out = 000b
+# Time is 90000 : Reset = 0  State = c  ALU A = cc05  ALU B = 000b ALU Out = cc10
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = d  ALU A = cc05  ALU B = 001b ALU Out = cc20
+# Time is 150000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 001b ALU Out = 001b
+# Time is 170000 : Reset = 0  State = c  ALU A = 01b5  ALU B = 001b ALU Out = 01d0
+# Time is 190000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 210000 : Reset = 0  State = d  ALU A = 01b5  ALU B = 0006 ALU Out = 01bb
+# Time is 230000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0006 ALU Out = 0006
+# Time is 250000 : Reset = 0  State = c  ALU A = 10ac  ALU B = 0006 ALU Out = 10b2
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = d  ALU A = 10ac  ALU B = 008a ALU Out = 1136
+# Time is 310000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 008a ALU Out = 008a
+# Time is 330000 : Reset = 0  State = c  ALU A = a040  ALU B = 008a ALU Out = a0ca
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = d  ALU A = cc05  ALU B = 01b5 ALU Out = ca50
+# Time is 390000 : Reset = 0  State = 4  ALU A = cc05  ALU B = 01b5 ALU Out = ca50
+# Time is 410000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 430000 : Reset = 0  State = d  ALU A = 10ac  ALU B = ca50 ALU Out = dafc
+# Time is 450000 : Reset = 0  State = 3  ALU A = 10ac  ALU B = ca50 ALU Out = dafc
+# Time is 460000 : Reset = 0  State = 3  ALU A = 10ac  ALU B = dafc ALU Out = eba8
+# Time is 470000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 490000 : Reset = 0  State = d  ALU A = dafc  ALU B = a040 ALU Out = 3abc
+# Time is 510000 : Reset = 0  State = 4  ALU A = dafc  ALU B = a040 ALU Out = 3abc
+# Time is 520000 : Reset = 0  State = 4  ALU A = 3abc  ALU B = a040 ALU Out = 9a7c
+# Time is 530000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 550000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 570000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 590000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 610000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 630000 : Reset = 0  State = 5  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(36)
+#    Time: 690 ns  Iteration: 0  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 36
+env ..
+# sim:/testProcessor
+env ..
+# sim:/testProcessor
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:41:55 on Jun 08,2018
+# vlog -reportprogress 300 ./Processor.sv 
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# End time: 01:41:55 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:41:55 on Jun 08,2018
+# vlog -reportprogress 300 ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 01:41:56 on Jun 08,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:41:56 on Jun 08,2018
+# vlog -reportprogress 300 ./RegegisterFile.v 
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# End time: 01:41:56 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:41:56 on Jun 08,2018
+# vlog -reportprogress 300 ./RegisterDualOE.v 
+# -- Compiling module RegisterDualOE
+# 
+# Top level modules:
+# 	RegisterDualOE
+# End time: 01:41:56 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:41:56 on Jun 08,2018
+# vlog -reportprogress 300 ./ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 01:41:56 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:41:56 on Jun 08,2018
+# vlog -reportprogress 300 ./instructionMemory.v 
+# -- Compiling module instructionMemory
+# 
+# Top level modules:
+# 	instructionMemory
+# End time: 01:41:56 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:41:56 on Jun 08,2018
+# vlog -reportprogress 300 ./GenericDecoder2.v 
+# -- Compiling module GenericDecoder
+# 
+# Top level modules:
+# 	GenericDecoder
+# End time: 01:41:56 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:41:56 on Jun 08,2018
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 01:41:56 on Jun 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 01:41:57 on Jun 08,2018, Elapsed time: 0:25:54
+# Errors: 0, Warnings: 4
+# vsim -L altera_mf_ver -voptargs=""+acc"" -t 1ps -lib work testProcessor 
+# Start time: 01:41:57 on Jun 08,2018
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.instructionMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.RegisterFile
+# Loading work.GenericDecoder
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.RegisterDualOE
+# ** Warning: (vsim-3015) ./testProcessor.sv(17): [PCDPC] - Port size (5) does not match connection size (7) for port 'PC_Out'. The port definition is at: ./Processor.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT File: ./Processor.sv
+# ** Warning: (vsim-3015) ./Processor.sv(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'Ra_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(52): [PCDPC] - Port size (1) does not match connection size (32) for port 'Rb_en'. The port definition is at: ./RegegisterFile.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/regs File: ./RegegisterFile.v
+# ** Warning: (vsim-3015) ./Processor.sv(53): [PCDPC] - Port size (3) does not match connection size (4) for port 'select'. The port definition is at: ./ALU.sv(12).
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/arithmaticAndLogic File: ./ALU.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 1  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 20000 : Reset = 0  State = f  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 30000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 50000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 70000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 90000 : Reset = 0  State = c  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 110000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 130000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 150000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 170000 : Reset = 0  State = c  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 190000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 210000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 230000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 250000 : Reset = 0  State = c  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 270000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 290000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 310000 : Reset = 0  State = 2  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 330000 : Reset = 0  State = c  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 350000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 370000 : Reset = 0  State = d  ALU A = cc05  ALU B = 01b5 ALU Out = ca50
+# Time is 390000 : Reset = 0  State = 4  ALU A = cc05  ALU B = 01b5 ALU Out = ca50
+# Time is 410000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 430000 : Reset = 0  State = d  ALU A = 10ac  ALU B = ca50 ALU Out = dafc
+# Time is 450000 : Reset = 0  State = 3  ALU A = 10ac  ALU B = ca50 ALU Out = dafc
+# Time is 460000 : Reset = 0  State = 3  ALU A = 10ac  ALU B = dafc ALU Out = eba8
+# Time is 470000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 490000 : Reset = 0  State = d  ALU A = dafc  ALU B = a040 ALU Out = 3abc
+# Time is 510000 : Reset = 0  State = 4  ALU A = dafc  ALU B = a040 ALU Out = 3abc
+# Time is 520000 : Reset = 0  State = 4  ALU A = 3abc  ALU B = a040 ALU Out = 9a7c
+# Time is 530000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 550000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 570000 : Reset = 0  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 590000 : Reset = 0  State = e  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 610000 : Reset = 0  State = d  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# Time is 630000 : Reset = 0  State = 5  ALU A = 0000  ALU B = 0000 ALU Out = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(36)
+#    Time: 690 ns  Iteration: 0  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 36

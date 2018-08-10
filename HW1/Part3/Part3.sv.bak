@@ -1,0 +1,16 @@
+module Part3(input [17:0]SW,output [17:0]LEDR,output [2:0] LEDG);
+reg [2:0]S;
+reg [2:0]U;
+reg [2:0]V;
+reg [2:0]W;
+reg [2:0]X;
+reg [2:0]Y;
+assign LEDR=SW;
+assign S= [17:15]SW;
+assign U= [14:12]SW;
+assign V= [11:9]SW;
+assign W= [8:6]SW;
+assign X= [5:3]SW;
+assign Y= [2:0]SW;
+
+endmodule

@@ -1,0 +1,43 @@
+module Tff(output Q,input T,input clock, input clear);
+
+
+always @ (clear)
+begin
+if(clear==0)
+begin
+Q<=0;
+end
+
+
+end
+
+
+
+always_ff @(posedge clock) begin
+Q<=(Q^T);
+
+
+end
+
+endmodule
+
+module testTff();
+reg T;
+reg Q;
+reg clock;
+reg clear;
+Tff(Q,T,clock,clear);
+
+initial 
+begin
+T<=0;
+Q<=0;
+clock<=0;
+clear<=1;
+
+
+end
+
+
+endmodule 
+

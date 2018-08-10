@@ -1,0 +1,5 @@
+module Processor(input clock, input reset, output IR_Out,output PC_Out,
+						output State, output NextState, output ALU_A, 
+						output ALU_B,output ALU_Out);
+						
+endmodule 

@@ -1,0 +1,106 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/eedqs/Google Drive/Documents for School/spring 12018/TCES 330/HW1/Part6
+vMux_3w_5_to_1
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1523843031
+!i10b 1
+!s100 ?oAYJo:OF]keiZ9M4ncY]0
+II8gEfIbMY1d55fR_?]YOE0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 Mux_3w_8_to_1_sv_unit
+S1
+R0
+Z5 w1523842994
+Z6 8./Mux_3w_8_to_1.sv
+Z7 F./Mux_3w_8_to_1.sv
+L0 1
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1523843030.000000
+Z10 !s107 ./Mux_3w_8_to_1.sv|
+Z11 !s90 -reportprogress|300|./Mux_3w_8_to_1.sv|
+!i113 1
+Z12 tCvgOpt 0
+n@mux_3w_5_to_1
+vMux_3w_5_to_1testbench
+R1
+R2
+!i10b 1
+!s100 L;6foBeB_hKEKBW>^Xo5L2
+I48:7:Edh4O6c=HH?OX6[o0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 41
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+n@mux_3w_5_to_1testbench
+vMux_3w_8_to_1
+R1
+Z13 !s110 1523897613
+!i10b 1
+!s100 G_`l279YLYFhf]7aKSDL@2
+I_VkmWbnFKV8mHhd3B9Xjj3
+R3
+R4
+S1
+Z14 dC:/Users/Spencer/Google Drive/Documents for School/spring 12018/TCES 330/HW1/Part6
+Z15 w1523860144
+R6
+R7
+L0 1
+R8
+r1
+!s85 0
+31
+Z16 !s108 1523897613.000000
+R10
+R11
+!i113 1
+R12
+n@mux_3w_8_to_1
+vMux_3w_8_to_1testbench
+R1
+R13
+!i10b 1
+!s100 3=XQ<KjFJ_IZGomLWEWI:1
+ID?5Zz2bXX2]ii::QZZHI?2
+R3
+R4
+S1
+R14
+R15
+R6
+R7
+L0 43
+R8
+r1
+!s85 0
+31
+R16
+R10
+R11
+!i113 1
+R12
+n@mux_3w_8_to_1testbench

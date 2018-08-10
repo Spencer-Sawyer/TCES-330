@@ -1,0 +1,66 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:20:37 on May 06,2018
+# vlog -reportprogress 300 ./Tff.sv 
+# -- Compiling module TeeFF
+# -- Compiling module testTff
+# 
+# Top level modules:
+# 	testTff
+# End time: 12:20:37 on May 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:20:37 on May 06,2018
+# vlog -reportprogress 300 ./Counter.sv 
+# -- Compiling module counter
+# -- Compiling module testCount
+# 
+# Top level modules:
+# 	testCount
+# End time: 12:20:37 on May 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work testCount 
+# Start time: 12:20:37 on May 06,2018
+# Loading sv_std.std
+# Loading work.testCount
+# Loading work.counter
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Error: Assertion error.
+#    Time: 720906 ps  Scope: testCount File: ./Counter.sv Line: 58
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:21:27 on May 06,2018
+# vlog -reportprogress 300 ./Tff.sv 
+# -- Compiling module TeeFF
+# -- Compiling module testTff
+# 
+# Top level modules:
+# 	testTff
+# End time: 12:21:27 on May 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:21:27 on May 06,2018
+# vlog -reportprogress 300 ./Counter.sv 
+# -- Compiling module counter
+# -- Compiling module testCount
+# 
+# Top level modules:
+# 	testCount
+# End time: 12:21:27 on May 06,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:21:28 on May 06,2018, Elapsed time: 0:00:51
+# Errors: 1, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work testCount 
+# Start time: 12:21:28 on May 06,2018
+# Loading sv_std.std
+# Loading work.testCount
+# Loading work.counter
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 19:37:10 on May 06,2018, Elapsed time: 7:15:42
+# Errors: 0, Warnings: 0
